@@ -1,9 +1,8 @@
 import { Metadata } from 'next';
 import * as React from 'react';
+import { ReactNode } from 'react';
 
 import '@/styles/globals.css';
-// !STARTERCONF This is for demo purposes, remove @/styles/colors.css import immediately
-import '@/styles/colors.css';
 
 import { siteConfig } from '@/constant/config';
 
@@ -39,24 +38,24 @@ export const metadata: Metadata = {
     title: siteConfig.title,
     description: siteConfig.description,
     images: [`${siteConfig.url}/images/og.jpg`],
-    // creator: '@th_clarence',
+    // creator: '@artemshchirov',
   },
   // authors: [
   //   {
-  //     name: 'Theodorus Clarence',
-  //     url: 'https://theodorusclarence.com',
+  //     name: 'Artem Shchirov',
+  //     url: 'https://github.com/artemshchirov',
   //   },
   // ],
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+interface Props {
+  children: ReactNode;
+}
+
+export default function RootLayout({ children }: Readonly<Props>) {
   return (
-    <html>
-      <body>{children}</body>
+    <html lang='en'>
+      <body suppressHydrationWarning>{children}</body>
     </html>
   );
 }

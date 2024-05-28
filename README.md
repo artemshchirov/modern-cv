@@ -1,5 +1,14 @@
 # Next.js + Tailwind CSS + TypeScript Starter and Boilerplate
 
+## TODO
+
+- [ ] Add [NProgress](https://github.com/theodorusclarence/expansion-pack?tab=readme-ov-file#nprogress)
+- [ ] Add [Storybook](https://github.com/theodorusclarence/expansion-pack?tab=readme-ov-file#storybook)
+- [ ] Add Jest tests
+- [ ] Add [Cypress](https://github.com/theodorusclarence/expansion-pack?tab=readme-ov-file#cypress) tests
+- [ ] Translate page to UA with [next-i18next](https://github.com/theodorusclarence/expansion-pack?tab=readme-ov-file#next-i18next)
+- [ ] Translate page to HE with [next-i18next](https://github.com/theodorusclarence/expansion-pack?tab=readme-ov-file#next-i18next)
+
 <div align="center">
   <h2>🔋 ts-nextjs-tailwind-starter</h2>
   <p>Next.js + Tailwind CSS + TypeScript starter packed with useful development features.</p>
