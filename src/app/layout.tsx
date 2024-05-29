@@ -1,8 +1,11 @@
 import { Metadata } from 'next';
+import { Inter as FontSans } from 'next/font/google';
 import * as React from 'react';
 import { ReactNode } from 'react';
 
 import '@/styles/globals.css';
+
+import { cn } from '@/lib/utils';
 
 import { siteConfig } from '@/constant/config';
 
@@ -48,6 +51,11 @@ export const metadata: Metadata = {
   // ],
 };
 
+const fontSans = FontSans({
+  subsets: ['latin'],
+  variable: '--font-sans',
+});
+
 interface Props {
   children: ReactNode;
 }
@@ -55,7 +63,15 @@ interface Props {
 export default function RootLayout({ children }: Readonly<Props>) {
   return (
     <html lang='en'>
-      <body suppressHydrationWarning>{children}</body>
+      <body
+        suppressHydrationWarning
+        className={cn(
+          'min-h-screen bg-background font-sans antialiased',
+          fontSans.variable
+        )}
+      >
+        {children}
+      </body>
     </html>
   );
 }

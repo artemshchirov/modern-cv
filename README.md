@@ -6,8 +6,9 @@
 - [ ] Add [Storybook](https://github.com/theodorusclarence/expansion-pack?tab=readme-ov-file#storybook)
 - [ ] Add Jest tests
 - [ ] Add [Cypress](https://github.com/theodorusclarence/expansion-pack?tab=readme-ov-file#cypress) tests
-- [ ] Translate page to UA with [next-i18next](https://github.com/theodorusclarence/expansion-pack?tab=readme-ov-file#next-i18next)
+- [ ] Translate page to UA, RU with [next-i18next](https://github.com/theodorusclarence/expansion-pack?tab=readme-ov-file#next-i18next)
 - [ ] Translate page to HE with [next-i18next](https://github.com/theodorusclarence/expansion-pack?tab=readme-ov-file#next-i18next)
+- [ ] Remove react-icons lib
 
 <div align="center">
   <h2>🔋 ts-nextjs-tailwind-starter</h2>
