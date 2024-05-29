@@ -1,24 +1,15 @@
 'use client';
 
 import Head from 'next/head';
-import Link from 'next/link';
 import '@/lib/env';
 
-import { Button } from '@/components/ui/button';
-import {
-  Sheet,
-  SheetClose,
-  SheetContent,
-  SheetFooter,
-  SheetHeader,
-  SheetTrigger,
-} from '@/components/ui/sheet';
+import AvatarComponent from '@/components/avatar-component';
+
+import Header from '@/layouts/header';
+import Section from '@/layouts/section';
 
 // NOTE: You can import SVGs as React Components
-import CloseIcon from '~/svg/close.svg';
-import EditIcon from '~/svg/edit.svg';
-import MenuIcon from '~/svg/menu.svg';
-// import MapPinIcon from '~/svg/map-pin.svg';
+import MapPinIcon from '~/svg/map-pin.svg';
 
 /**
  * SVGR Support
@@ -34,99 +25,95 @@ import MenuIcon from '~/svg/menu.svg';
 
 export default function HomePage() {
   return (
-    <main>
+    <main className='py-9 px-3 flex flex-col gap-y-7'>
       <Head>
         <title>Hi</title>
       </Head>
-      <section className='min-h-screen bg-gray-200 py-[36px] px-[12px]'>
-        <header className='flex justify-between items-center'>
-          <div className='max-w-max flex items-center gap-x-6 rounded-[100px] border-2 border-black py-[4px] pr-[28px] pl-[22px]'>
-            <div className='w-[13px] h-[13px] rounded-full bg-lime-500 border border-white' />{' '}
-            <p className='text-[16px] leading-[24px]'>Available</p>
-          </div>
-          <div className='flex gap-x-4'>
-            <EditIcon className='w-[26px] h-[26px]' stroke='#29303E' />
 
-            <Sheet>
-              <SheetTrigger>
-                <MenuIcon
-                  className='w-[26px] h-[26px] cursor-pointer'
-                  stroke='#29303E'
-                />
-              </SheetTrigger>
-              <SheetContent
-                side='top'
-                className='min-h-full flex flex-col pt-[36px] pb-[24px] px-[12px]'
-              >
-                <SheetHeader className='flex flex-row justify-between items-center'>
-                  <div className='max-w-max py-[7px] px-[10px]  rounded-[100px] flex items-center gap-x-[12px] border-2 '>
-                    <div className='w-[17px] h-[17px] rounded-full bg-[#4E565F] border border-black' />
-                    <div className='w-[17px] h-[17px] rounded-full bg-white border border-gray-300' />
-                  </div>
-                  <SheetClose className='m-0'>
-                    <CloseIcon className='w-[24px] h-[24px]' stroke='#29303E' />
-                  </SheetClose>
-                </SheetHeader>
-                <div className=' flex flex-col gap-y-[10px] pt-[44px]'>
-                  <Link
-                    href='#'
-                    className='w-full text-[#585D66] text-end py-[10px] pr-[20px] transition rounded-[12px] hover:bg-[#95A3B6] active:opacity-80'
-                  >
-                    About
-                  </Link>
-                  <Link
-                    href='#'
-                    className='w-full text-[#585D66] text-end py-[10px] pr-[20px] transition rounded-[12px] hover:bg-[#95A3B6] active:opacity-80'
-                  >
-                    Experience & Education
-                  </Link>
-                  <Link
-                    href='#'
-                    className='w-full text-[#585D66] text-end py-[10px] pr-[20px] transition rounded-[12px] hover:bg-[#95A3B6] active:opacity-80'
-                  >
-                    Skills
-                  </Link>
-                  <Link
-                    href='#'
-                    className='w-full text-[#585D66] text-end py-[10px] pr-[20px] transition rounded-[12px] hover:bg-[#95A3B6] active:opacity-80'
-                  >
-                    CV
-                  </Link>
-                  <Link
-                    href='#'
-                    className='w-full text-[#585D66] text-end py-[10px] pr-[20px] transition rounded-[12px] hover:bg-[#95A3B6] active:opacity-80'
-                  >
-                    Years
-                  </Link>
-                  <Link
-                    href='#'
-                    className='w-full text-[#585D66] text-end py-[10px] pr-[20px] transition rounded-[12px] hover:bg-[#95A3B6] active:opacity-80'
-                  >
-                    Projects
-                  </Link>
-                  <Link
-                    href='#'
-                    className='w-full text-[#585D66] text-end py-[10px] pr-[20px] transition rounded-[12px] hover:bg-[#95A3B6] active:opacity-80'
-                  >
-                    Latest Work
-                  </Link>
-                  <Link
-                    href='#'
-                    className='w-full text-[#585D66] text-end py-[10px] pr-[20px] transition rounded-[12px] hover:bg-[#95A3B6] active:opacity-80'
-                  >
-                    Contacts
-                  </Link>
-                </div>
-                <SheetFooter className='mt-auto flex flex-col gap-y-[24px]'>
-                  <Button type='submit'>Contact me</Button>
-                  <p className='text-[#A5A9B0]'>© 2024 Ɐrtem</p>
-                </SheetFooter>
-              </SheetContent>
-            </Sheet>
+      <Header />
+
+      <div className='grid grid-cols-2 gap-4'>
+        <Section
+          aria-label='Profile Image'
+          className='min-w-[160px] min-h-[160px] flex justify-center items-center outline outline-1 rounded-xl'
+        >
+          <div className='w-[120px] h-[120px] flex justify-center items-center rounded-full bg-white outline outline-1 outline-gray-500'>
+            <AvatarComponent />
           </div>
-        </header>
-        {/* <MapPinIcon className='w-[22px] h-[22px]' fill='#29303E' /> */}
-      </section>
+        </Section>
+        <div className='w-full grid gap-y-3'>
+          <Section className='w-full flex flex-col outline outline-1 rounded-xl pl-[15px] py-[15px]'>
+            <h1 className='text-base text-[#29303E] whitespace-nowrap'>
+              Artem Shchirov
+            </h1>
+            <p className='text-sm text-[#60656E] whitespace-nowrap'>
+              Full-Stack Developer
+            </p>
+          </Section>
+          <Section className='w-full flex flex-col gap-y-1 outline outline-1 rounded-xl px-[17px] pt-3.5 pb-3'>
+            <h2 className='text-sm text-[#95A3B6] pl-[3px] whitespace-nowrap'>
+              Location
+            </h2>
+            <div className='flex items-center gap-x-1'>
+              <MapPinIcon className='w-[22px] h-[22px]' fill='#29303E' />
+              <p className='text-base text-[#60656E] whitespace-nowrap'>
+                Israel
+              </p>
+            </div>
+          </Section>
+        </div>
+        <Section className='col-span-2'>
+          <Section aria-label='About Artem'>
+            <h2>About</h2>
+            <p>
+              Hi, I am Artem. Web developer with a strong passion for
+              innovation, creativity, and the transformation of more ideas into
+              remarkable web applications. My background in various programming
+              languages and frameworks equips me to take on challenging. Hi, I
+              am Artem. Web developer with a strong passion for innovation,
+              creativity, and the transformation of more ideas into remarkable
+              web applications. My background in various programming languages
+              and frameworks equips me to take on challenging
+            </p>
+          </Section>
+
+          <Section aria-label='Language Proficiency'>
+            <h2>Languages</h2>
+            <ul>
+              <li>
+                <button>HE</button>
+              </li>
+              <li>
+                <button>EN</button>
+              </li>
+              <li>
+                <button>UA</button>
+              </li>
+              <li>
+                <button>RU</button>
+              </li>
+            </ul>
+          </Section>
+
+          <Section>
+            <h2>Experience & Education</h2>
+            <ul>
+              <li>
+                <article>1</article>
+              </li>
+              <li>
+                <article>2</article>
+              </li>
+              <li>
+                <article>3</article>
+              </li>
+              <li>
+                <article>4</article>
+              </li>
+            </ul>
+          </Section>
+        </Section>
+      </div>
     </main>
   );
 }
