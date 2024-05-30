@@ -2,6 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
+.item1 {
+  grid-area: item1;
+}
+.item2 {
+  grid-area: item2;
+}
+.item3 {
+  grid-area: item3;
+}
+.item4 {
+  grid-area: item4;
+}
+.item5 {
+  grid-area: item5;
+}
+.item6 {
+  grid-area: item6;
+}
+.item7 {
+  grid-area: item7;
+}
+.item8 {
+  grid-area: item8;
+}
+.item9 {
+  grid-area: item9;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'item1 item2'
+    'item1 item3'
+    'item4 item4'
+    'item5 item5'
+    'item6 item7'
+    'item8 item8';
+}
+
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-areas:
+      'item1 item2 item5'
+      'item1 item3 item5'
+      'item4 item4 item5'
+      'item6 item7 item5'
+      'item8 item8 item8';
+  }
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
