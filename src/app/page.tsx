@@ -4,6 +4,8 @@ import Head from 'next/head';
 import '@/lib/env';
 
 import AvatarComponent from '@/components/avatar-component';
+import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 import Header from '@/layouts/header';
 import Section from '@/layouts/section';
@@ -32,17 +34,17 @@ export default function HomePage() {
 
       <Header />
 
-      <div className='grid grid-cols-2 gap-4'>
+      <div className='grid grid-cols-[160px_auto] gap-4'>
         <Section
           aria-label='Profile Image'
-          className='min-w-[160px] min-h-[160px] flex justify-center items-center outline outline-1 rounded-xl'
+          className='flex justify-center items-center outline outline-1 rounded-xl'
         >
-          <div className='w-[120px] h-[120px] flex justify-center items-center rounded-full bg-white outline outline-1 outline-gray-500'>
+          <div className='w-[120px] h-[120px] flex justify-center items-center rounded-full outline outline-1 outline-gray-500'>
             <AvatarComponent />
           </div>
         </Section>
-        <div className='w-full grid gap-y-3'>
-          <Section className='w-full flex flex-col outline outline-1 rounded-xl pl-[15px] py-[15px]'>
+        <div className='grid gap-y-3'>
+          <Section className='flex flex-col outline outline-1 rounded-xl pl-[15px] py-[15px]'>
             <h1 className='text-base text-[#29303E] whitespace-nowrap'>
               Artem Shchirov
             </h1>
@@ -50,7 +52,7 @@ export default function HomePage() {
               Full-Stack Developer
             </p>
           </Section>
-          <Section className='w-full flex flex-col gap-y-1 outline outline-1 rounded-xl px-[17px] pt-3.5 pb-3'>
+          <Section className='flex flex-col gap-y-1 outline outline-1 rounded-xl px-[17px] pt-3.5 pb-3'>
             <h2 className='text-sm text-[#95A3B6] pl-[3px] whitespace-nowrap'>
               Location
             </h2>
@@ -62,9 +64,9 @@ export default function HomePage() {
             </div>
           </Section>
         </div>
-        <Section className='col-span-2'>
-          <Section aria-label='About Artem'>
-            <h2>About</h2>
+        <Section className='col-span-2 flex flex-col gap-y-5 outline outline-1 rounded-xl px-4 pt-3.5 pb-5'>
+          <Section aria-label='About Artem' className='flex flex-col gap-y-3'>
+            <h2 className='pl-1 text-sm text-[#95A3B6]'>About</h2>
             <p>
               Hi, I am Artem. Web developer with a strong passion for
               innovation, creativity, and the transformation of more ideas into
@@ -77,41 +79,69 @@ export default function HomePage() {
             </p>
           </Section>
 
-          <Section aria-label='Language Proficiency'>
-            <h2>Languages</h2>
-            <ul>
+          <Section
+            aria-label='Language Proficiency'
+            className=' flex flex-col gap-y-3'
+          >
+            <h2 className='pl-1 text-sm text-[#95A3B6]'>Languages</h2>
+            <ul className='flex gap-x-3'>
               <li>
-                <button>HE</button>
+                <Button>HE</Button>
               </li>
               <li>
-                <button>EN</button>
+                <Button>EN</Button>
               </li>
               <li>
-                <button>UA</button>
+                <Button>UA</Button>
               </li>
               <li>
-                <button>RU</button>
-              </li>
-            </ul>
-          </Section>
-
-          <Section>
-            <h2>Experience & Education</h2>
-            <ul>
-              <li>
-                <article>1</article>
-              </li>
-              <li>
-                <article>2</article>
-              </li>
-              <li>
-                <article>3</article>
-              </li>
-              <li>
-                <article>4</article>
+                <Button>RU</Button>
               </li>
             </ul>
           </Section>
+        </Section>
+        <Section className='col-span-2 flex flex-col gap-y-4 outline outline-1 rounded-xl px-4 pt-3.5'>
+          <h2 className='pl-1 text-sm text-[#95A3B6]'>
+            Experience & Education
+          </h2>
+          <Tabs defaultValue='experience' className=''>
+            <TabsList>
+              <TabsTrigger value='experience'>Account</TabsTrigger>
+              <TabsTrigger value='education'>Password</TabsTrigger>
+            </TabsList>
+            <TabsContent value='experience'>
+              <ul className='flex flex-col gap-y-3'>
+                <li>
+                  <article>Ex1</article>
+                </li>
+                <li>
+                  <article>Ex2</article>
+                </li>
+                <li>
+                  <article>Ex3</article>
+                </li>
+                <li>
+                  <article>Ex4</article>
+                </li>
+              </ul>
+            </TabsContent>
+            <TabsContent value='education'>
+              <ul className='flex flex-col gap-y-3'>
+                <li>
+                  <article>Ed1</article>
+                </li>
+                <li>
+                  <article>Ed2</article>
+                </li>
+                <li>
+                  <article>Ed3</article>
+                </li>
+                <li>
+                  <article>Ed4</article>
+                </li>
+              </ul>
+            </TabsContent>
+          </Tabs>
         </Section>
       </div>
     </main>
