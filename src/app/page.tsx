@@ -5,6 +5,7 @@ import '@/lib/env';
 
 import AvatarComponent from '@/components/avatar-component';
 import { Button } from '@/components/ui/button';
+import { ScrollArea } from '@/components/ui/scroll-area';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 import Header from '@/layouts/header';
@@ -100,49 +101,91 @@ export default function HomePage() {
             </ul>
           </Section>
         </Section>
-        <Section className='col-span-2 flex flex-col gap-y-4 outline outline-1 rounded-xl px-4 pt-3.5'>
-          <h2 className='pl-1 text-sm text-[#95A3B6]'>
-            Experience & Education
-          </h2>
-          <Tabs defaultValue='experience' className=''>
-            <TabsList>
-              <TabsTrigger value='experience'>Account</TabsTrigger>
-              <TabsTrigger value='education'>Password</TabsTrigger>
-            </TabsList>
-            <TabsContent value='experience'>
-              <ul className='flex flex-col gap-y-3'>
-                <li>
-                  <article>Ex1</article>
-                </li>
-                <li>
-                  <article>Ex2</article>
-                </li>
-                <li>
-                  <article>Ex3</article>
-                </li>
-                <li>
-                  <article>Ex4</article>
-                </li>
-              </ul>
-            </TabsContent>
-            <TabsContent value='education'>
-              <ul className='flex flex-col gap-y-3'>
-                <li>
-                  <article>Ed1</article>
-                </li>
-                <li>
-                  <article>Ed2</article>
-                </li>
-                <li>
-                  <article>Ed3</article>
-                </li>
-                <li>
-                  <article>Ed4</article>
-                </li>
-              </ul>
-            </TabsContent>
-          </Tabs>
-        </Section>
+        <ScrollArea className='col-span-2 max-h-[612px] rounded-xl outline outline-1 '>
+          <Section className='flex flex-col gap-y-4 px-4 pt-3.5'>
+            <h2 className='pl-1 text-sm text-[#95A3B6]'>
+              Experience & Education
+            </h2>
+            <Tabs defaultValue='experience' className=''>
+              <TabsList>
+                <TabsTrigger value='experience'>Account</TabsTrigger>
+                <TabsTrigger value='education'>Password</TabsTrigger>
+              </TabsList>
+              <TabsContent value='experience'>
+                <ul className='flex flex-col gap-y-3'>
+                  <li>
+                    <article>
+                      1 Lorem ipsum dolor, sit amet consectetur adipisicing
+                      elit. Ea, dolor obcaecati. Debitis at nobis atque? Dolorum
+                      recusandae dolorem, ab aperiam architecto, dolore, rerum
+                      minima itaque saepe laboriosam fuga tenetur facilis.
+                    </article>
+                  </li>
+                  <li>
+                    <article>
+                      2 Lorem ipsum dolor, sit amet consectetur adipisicing
+                      elit. Ea, dolor obcaecati. Debitis at nobis atque? Dolorum
+                      recusandae dolorem, ab aperiam architecto, dolore, rerum
+                      minima itaque saepe laboriosam fuga tenetur facilis.
+                    </article>
+                  </li>
+                  <li>
+                    <article>
+                      3 Lorem ipsum dolor, sit amet consectetur adipisicing
+                      elit. Ea, dolor obcaecati. Debitis at nobis atque? Dolorum
+                      recusandae dolorem, ab aperiam architecto, dolore, rerum
+                      minima itaque saepe laboriosam fuga tenetur facilis.
+                    </article>
+                  </li>
+                  <li>
+                    <article>
+                      4 Lorem ipsum dolor, sit amet consectetur adipisicing
+                      elit. Ea, dolor obcaecati. Debitis at nobis atque? Dolorum
+                      recusandae dolorem, ab aperiam architecto, dolore, rerum
+                      minima itaque saepe laboriosam fuga tenetur facilis.
+                    </article>
+                  </li>
+                </ul>
+              </TabsContent>
+              <TabsContent value='education'>
+                <ul className='flex flex-col gap-y-3'>
+                  <li>
+                    <article>
+                      5 Lorem ipsum dolor, sit amet consectetur adipisicing
+                      elit. Ea, dolor obcaecati. Debitis at nobis atque? Dolorum
+                      recusandae dolorem, ab aperiam architecto, dolore, rerum
+                      minima itaque saepe laboriosam fuga tenetur facilis.
+                    </article>
+                  </li>
+                  <li>
+                    <article>
+                      6 Lorem ipsum dolor, sit amet consectetur adipisicing
+                      elit. Ea, dolor obcaecati. Debitis at nobis atque? Dolorum
+                      recusandae dolorem, ab aperiam architecto, dolore, rerum
+                      minima itaque saepe laboriosam fuga tenetur facilis.
+                    </article>
+                  </li>
+                  <li>
+                    <article>
+                      7 Lorem ipsum dolor, sit amet consectetur adipisicing
+                      elit. Ea, dolor obcaecati. Debitis at nobis atque? Dolorum
+                      recusandae dolorem, ab aperiam architecto, dolore, rerum
+                      minima itaque saepe laboriosam fuga tenetur facilis.
+                    </article>
+                  </li>
+                  <li>
+                    <article>
+                      8 Lorem ipsum dolor, sit amet consectetur adipisicing
+                      elit. Ea, dolor obcaecati. Debitis at nobis atque? Dolorum
+                      recusandae dolorem, ab aperiam architecto, dolore, rerum
+                      minima itaque saepe laboriosam fuga tenetur facilis.
+                    </article>
+                  </li>
+                </ul>
+              </TabsContent>
+            </Tabs>
+          </Section>
+        </ScrollArea>
       </div>
     </main>
   );
