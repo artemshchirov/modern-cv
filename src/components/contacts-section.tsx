@@ -5,7 +5,7 @@ import Section from '@/layouts/section';
 
 export default function ContactsSection() {
   return (
-    <Section className='col-span-2 flex flex-col gap-y-4 outline outline-1 rounded-xl px-5 pt-3.5 pb-8'>
+    <Section className='contacts col-span-2 flex flex-col gap-y-4 outline outline-1 rounded-xl px-5 pt-3.5 pb-8'>
       <Typography variant='h2' size='sm'>
         Contacts
       </Typography>

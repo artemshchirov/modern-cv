@@ -14,16 +14,16 @@ import CheckIcon from '~/svg/check.svg';
 
 export default function ProjectsSection() {
   return (
-    <ScrollArea className='col-span-2 max-h-[612px] rounded-xl outline outline-1 '>
+    <ScrollArea className='projects col-span-2 rounded-xl outline outline-1 '>
       <Section className='flex flex-col gap-y-4 px-4 pt-3.5 pb-5'>
         <Typography variant='h2' size='sm' className='ml-1'>
-          Experience & Education
+          Projects
         </Typography>
 
         <Tabs defaultValue='experience'>
           <TabsList>
-            <TabsTrigger value='experience'>Account</TabsTrigger>
-            <TabsTrigger value='education'>Password</TabsTrigger>
+            <TabsTrigger value='experience'>Projects</TabsTrigger>
+            <TabsTrigger value='education'>Side Projects</TabsTrigger>
           </TabsList>
           <TabsContent value='experience'>
             <Accordion

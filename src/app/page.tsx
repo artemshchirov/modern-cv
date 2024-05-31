@@ -31,20 +31,17 @@ import Header from '@/layouts/header';
 
 export default function HomePage() {
   return (
-    <main className='py-9 px-3 flex flex-col gap-y-7'>
+    <main className='py-9 px-3 flex flex-col gap-y-7 '>
       <Head>
         <title>Hi</title>
       </Head>
+      <div className='grid-container-1 mx-auto'>
+        <Header />
 
-      <Header />
-
-      <div className='grid-container-1'>
         <ProfileSection />
         <BioSection />
         <ExperienceSection />
-      </div>
 
-      <div className='grid-container-2'>
         <SkillsSection />
         <CvSection />
         <YearsSection />

@@ -5,7 +5,7 @@ import Section from '@/layouts/section';
 
 export default function CvSection() {
   return (
-    <Section className='item6 flex flex-col gap-y-[18px] outline outline-1 rounded-xl px-5 pt-3.5 pb-5'>
+    <Section className='cv item6 flex flex-col gap-y-[18px] outline outline-1 rounded-xl px-5 pt-3.5 pb-5'>
       <Typography variant='h2' size='sm'>
         CV
       </Typography>

@@ -17,7 +17,7 @@ import MenuIcon from '~/svg/menu.svg';
 
 export default function Header() {
   return (
-    <header className='flex justify-between items-center'>
+    <header className='header flex justify-between items-center pb-2'>
       <div className='max-w-max flex items-center gap-x-6 rounded-[100px] outline outline-2 outline-black py-1.5 pr-[30px] pl-6'>
         <div className='animate-pulse w-3.5 h-3.5 rounded-full bg-lime-400 outline outline-1 outline-white' />
         <p className='text-base'>Available</p>

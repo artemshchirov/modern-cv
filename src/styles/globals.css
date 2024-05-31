@@ -2,57 +2,95 @@
 @tailwind components;
 @tailwind utilities;
 
+.header {
+  grid-area: header;
+}
 .profile {
   grid-area: profile;
 }
-.item2 {
-  grid-area: item2;
+.bio {
+  grid-area: bio;
 }
-.item3 {
-  grid-area: item3;
+.experience {
+  grid-area: experience;
 }
-.item4 {
-  grid-area: item4;
+.skills {
+  grid-area: skills;
 }
-.item5 {
-  grid-area: item5;
+.cv {
+  grid-area: cv;
 }
-.item6 {
-  grid-area: item6;
+.years {
+  grid-area: years;
 }
-.item7 {
-  grid-area: item7;
+.projects {
+  grid-area: projects;
 }
-.item8 {
-  grid-area: item8;
+.contacts {
+  grid-area: contacts;
 }
-.item9 {
-  grid-area: item9;
+.swiper {
+  grid-area: swiper;
+}
+.showcases {
+  grid-area: showcases;
+}
+.template {
+  grid-area: template;
 }
 
 .grid-container-1 {
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 160px 292px 612px;
+  grid-template-rows: auto 160px 292px 612px 336px 160px 608px 336px 140px 380px 56px;
   grid-template-areas:
+    'header header'
     'profile profile'
-    'item4 item4'
-    'item5 item5'
-    'item6 item6'
-    'item7 item7'
-    'item8 item8';
+    'bio bio'
+    'experience experience'
+    'skills skills'
+    'cv years'
+    'projects projects'
+    'swiper swiper'
+    'contacts contacts'
+    'showcases showcases'
+    'template template';
 }
 
-@media (min-width: 768px) {
-  .grid-container {
+/* TODO: Do i need only here? */
+@media only screen and (min-width: 768px) {
+  .grid-container-1 {
     grid-template-columns: 1fr 1fr 2fr;
-    grid-template-rows: 160px 292px 167px 1fr;
+    grid-template-rows: auto 166px 292px 166px 192px 142px 395px 56px 720px;
+    gap: 20px;
     grid-template-areas:
-      'item1 item1 item5'
-      'item4 item4 item5'
-      'item6 item7 item5'
-      'item8 item8 item8';
+      'header header header'
+      'profile profile experience'
+      'bio bio experience'
+      'cv years experience'
+      'skills skills skills'
+      'contacts contacts projects'
+      'showcases showcases projects'
+      'template template projects'
+      'swiper swiper swiper';
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .grid-container-1 {
+    display: grid;
+    grid-template-columns: 404px 192px 192px 404px;
+    grid-template-rows: auto 192px 192px 80px 238px 46px 150px 56px;
+    grid-template-areas:
+      'header header header header'
+      'profile skills skills skills'
+      'bio cv years projects'
+      'bio swiper swiper projects'
+      'experience swiper swiper projects'
+      'experience swiper swiper showcases'
+      'experience contacts contacts showcases'
+      'experience template template showcases';
   }
 }
 
