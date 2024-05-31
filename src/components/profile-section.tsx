@@ -1,14 +1,16 @@
-import Typography from '@/components/typography';
-
-import Section from '@/layouts/section';
+import AvatarSection from '@/components/avatar-section';
+import LocationSection from '@/components/location-section';
+import RoleSection from '@/components/role-section';
 
 export default function ProfileSection() {
   return (
-    <Section className='item2 flex flex-col outline outline-1 rounded-xl px-[11px] py-[15px]'>
-      <Typography variant='h1'>Artem Shchirov</Typography>
-      <Typography color='#60656E' size='sm'>
-        Full-Stack Developer
-      </Typography>
-    </Section>
+    <div className='profile grid grid-cols-[160px_auto] grid-rows-2 gap-x-4 gap-y-3'>
+      {/* TODO: Move all grid to css where is others grids in one place grids.css */}
+      <AvatarSection />
+
+      <RoleSection />
+
+      <LocationSection />
+    </div>
   );
 }

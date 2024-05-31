@@ -4,7 +4,11 @@ import Section from '@/layouts/section';
 
 export default function AboutSection() {
   return (
-    <Section aria-label='About Artem' className='flex flex-col gap-y-3'>
+    <Section
+      aria-label='About Artem'
+      className='flex flex-col gap-y-3 overflow-hidden'
+    >
+      {/* TODO: remove overflow-hidden */}
       <Typography variant='h2' size='sm'>
         About
       </Typography>

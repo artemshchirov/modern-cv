@@ -19,7 +19,7 @@ export default function Header() {
   return (
     <header className='flex justify-between items-center'>
       <div className='max-w-max flex items-center gap-x-6 rounded-[100px] outline outline-2 outline-black py-1.5 pr-[30px] pl-6'>
-        <div className='w-3.5 h-3.5 rounded-full bg-lime-500 outline outline-1 outline-white' />
+        <div className='animate-pulse w-3.5 h-3.5 rounded-full bg-lime-400 outline outline-1 outline-white' />
         <p className='text-base'>Available</p>
       </div>
       <div className='flex gap-x-4'>

@@ -11,16 +11,16 @@ export default function ContactsSection() {
       </Typography>
       <ul className='max-w-max mx-auto flex gap-x-5'>
         <li>
-          <Button>GitHub</Button>
+          <Button>G</Button>
         </li>
         <li>
-          <Button>LinkedIn</Button>
+          <Button>L</Button>
         </li>
         <li>
-          <Button>WhatsApp</Button>
+          <Button>W</Button>
         </li>
         <li>
-          <Button>Email</Button>
+          <Button>E</Button>
         </li>
       </ul>
     </Section>

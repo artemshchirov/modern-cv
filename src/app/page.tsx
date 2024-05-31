@@ -3,8 +3,17 @@
 import Head from 'next/head';
 import '@/lib/env';
 
-import GridAside from '@/components/grid-aside';
-import GridMain from '@/components/grid-main';
+import BioSection from '@/components/bio-section';
+import ContactsSection from '@/components/contacts-section';
+import CvSection from '@/components/cv-section';
+import ExperienceSection from '@/components/experience-section';
+import ProfileSection from '@/components/profile-section';
+import ProjectsSection from '@/components/projects-section';
+import ShowcasesSection from '@/components/showcases-section';
+import SkillsSection from '@/components/skills-section';
+import SwiperSection from '@/components/swiper-section';
+import TemplateSection from '@/components/template-section';
+import YearsSection from '@/components/years-section';
 
 import Header from '@/layouts/header';
 
@@ -29,10 +38,21 @@ export default function HomePage() {
 
       <Header />
 
-      <div className='grid-container'>
-        <GridAside />
+      <div className='grid-container-1'>
+        <ProfileSection />
+        <BioSection />
+        <ExperienceSection />
+      </div>
 
-        <GridMain />
+      <div className='grid-container-2'>
+        <SkillsSection />
+        <CvSection />
+        <YearsSection />
+        <ProjectsSection />
+        <ContactsSection />
+        <SwiperSection />
+        <ShowcasesSection />
+        <TemplateSection />
       </div>
     </main>
   );

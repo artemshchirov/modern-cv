@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.item1 {
-  grid-area: item1;
+.profile {
+  grid-area: profile;
 }
 .item2 {
   grid-area: item2;
@@ -30,22 +30,26 @@
   grid-area: item9;
 }
 
-.grid-container {
+.grid-container-1 {
   display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 160px 292px 612px;
   grid-template-areas:
-    'item1 item2'
-    'item1 item3'
+    'profile profile'
     'item4 item4'
     'item5 item5'
-    'item6 item7'
+    'item6 item6'
+    'item7 item7'
     'item8 item8';
 }
 
 @media (min-width: 768px) {
   .grid-container {
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 160px 292px 167px 1fr;
     grid-template-areas:
-      'item1 item2 item5'
-      'item1 item3 item5'
+      'item1 item1 item5'
       'item4 item4 item5'
       'item6 item7 item5'
       'item8 item8 item8';
