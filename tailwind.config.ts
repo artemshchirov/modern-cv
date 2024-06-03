@@ -40,6 +40,8 @@ const config = {
         dot: '-1.6px -1.6px 3px 0px rgba(255, 255, 255, 0.41) inset, 1.6px 1.3px 1.98px 0px rgba(99, 116, 139, 0.20) inset',
         'dot-active':
           '-3px -3px 6px 0px rgba(255, 255, 255, 0.53), 2px 2px 4px 0px #A6B4C8',
+        'btn-lang':
+          '-3px -3px 6px 0px rgba(255, 255, 255, 0.53), 8px 9px 8px -6px rgba(166, 180, 200, 0.85)',
       },
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],

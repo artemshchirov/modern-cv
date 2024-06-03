@@ -19,9 +19,7 @@ export default function Typography({
   color,
   className,
 }: Readonly<Props>) {
-  const baseStyle = `${
-    variant !== 'p' ? 'max-w-max whitespace-nowrap' : 'max-w-max '
-  }`;
+  const baseStyle = `max-w-max ${variant !== 'p' ? 'whitespace-nowrap' : ''}`;
 
   const variantStyles = {
     h1: 'text-[#29303E]',
@@ -37,9 +35,14 @@ export default function Typography({
     baseStyle,
     `text-${size}`,
     variantStyles[variant],
-    { [`text-[${color}]`]: color },
     className
   );
 
-  return <ComponentTag className={textStyle}>{children}</ComponentTag>;
+  const style = color ? { color } : {};
+
+  return (
+    <ComponentTag className={textStyle} style={style}>
+      {children}
+    </ComponentTag>
+  );
 }

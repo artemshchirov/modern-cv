@@ -38,17 +38,38 @@
 .template {
   grid-area: template;
 }
+.first {
+  grid-area: first;
+}
+.second {
+  grid-area: second;
+}
 
 .grid-container-1 {
   display: grid;
+  grid-template-areas:
+    'header'
+    'first'
+    'second';
+}
+
+.grid-container-2 {
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: 160px minmax(292, max-content) 612px 336px;
+  grid-template-areas:
+    'profile'
+    'bio'
+    'experience'
+    'skills';
+}
+
+.grid-container-3 {
+  display: grid;
   gap: 1rem;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 160px 292px 612px 336px 160px 608px 336px 140px 380px 56px;
+  grid-template-rows: 290px 160px 612px 336px 140px 380px 56px;
   grid-template-areas:
-    'header header'
-    'profile profile'
-    'bio bio'
-    'experience experience'
     'skills skills'
     'cv years'
     'projects projects'
@@ -61,14 +82,29 @@
 /* TODO: Do i need only here? */
 @media only screen and (min-width: 768px) {
   .grid-container-1 {
-    grid-template-columns: 1fr 1fr 2fr;
-    grid-template-rows: auto 166px 292px 166px 192px 142px 395px 56px 720px;
-    gap: 20px;
+    display: grid;
+    gap: 1rem;
     grid-template-areas:
-      'header header header'
+      'header'
+      'first'
+      'second';
+  }
+
+  .grid-container-2 {
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 166px minmax(292px, max-content) 166px;
+    grid-template-areas:
       'profile profile experience'
       'bio bio experience'
-      'cv years experience'
+      'cv years experience';
+  }
+
+  .grid-container-3 {
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-rows: 192px 142px 395px 56px 720px;
+    grid-template-areas:
       'skills skills skills'
       'contacts contacts projects'
       'showcases showcases projects'
@@ -80,17 +116,36 @@
 @media only screen and (min-width: 1440px) {
   .grid-container-1 {
     display: grid;
-    grid-template-columns: 404px 192px 192px 404px;
-    grid-template-rows: auto 192px 192px 80px 238px 46px 150px 56px;
+    gap: 1rem;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
     grid-template-areas:
-      'header header header header'
-      'profile skills skills skills'
-      'bio cv years projects'
-      'bio swiper swiper projects'
-      'experience swiper swiper projects'
-      'experience swiper swiper showcases'
-      'experience contacts contacts showcases'
-      'experience template template showcases';
+      'header header'
+      'first second';
+  }
+
+  .grid-container-2 {
+    display: grid;
+    grid-template-columns: 404px;
+    grid-template-rows: 192px minmax(292px, max-content) auto;
+    grid-template-areas:
+      'profile'
+      'bio'
+      'experience';
+  }
+
+  .grid-container-3 {
+    display: grid;
+    grid-template-columns: 192px 192px 404px;
+    grid-template-rows: 192px 192px 80px 238px 46px 150px 56px;
+    grid-template-areas:
+      'skills skills skills'
+      'cv years projects'
+      'swiper swiper projects'
+      'swiper swiper projects'
+      'swiper swiper showcases'
+      'contacts contacts showcases'
+      'template template showcases';
   }
 }
 

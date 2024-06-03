@@ -35,21 +35,28 @@ export default function HomePage() {
       <Head>
         <title>Hi</title>
       </Head>
+
       <div className='grid-container-1 mx-auto'>
         <Header />
 
-        <ProfileSection />
-        <BioSection />
-        <ExperienceSection />
+        <div className='first grid-container-2'>
+          <ProfileSection />
+          <BioSection />
+          <ExperienceSection />
+          <CvSection className='hidden md:block xl:hidden' />
+          <YearsSection className='hidden md:block xl:hidden' />
+        </div>
 
-        <SkillsSection />
-        <CvSection />
-        <YearsSection />
-        <ProjectsSection />
-        <ContactsSection />
-        <SwiperSection />
-        <ShowcasesSection />
-        <TemplateSection />
+        <div className='second grid-container-3'>
+          <SkillsSection />
+          <CvSection className='md:hidden xl:block' />
+          <YearsSection className='md:hidden xl:block' />
+          <ProjectsSection />
+          <ContactsSection />
+          <SwiperSection />
+          <ShowcasesSection />
+          <TemplateSection />
+        </div>
       </div>
     </main>
   );
