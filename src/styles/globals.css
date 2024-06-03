@@ -47,6 +47,7 @@
 
 .grid-container-1 {
   display: grid;
+  gap: 1rem;
   grid-template-areas:
     'header'
     'first'
@@ -56,12 +57,11 @@
 .grid-container-2 {
   display: grid;
   gap: 1rem;
-  grid-template-rows: 160px minmax(292, max-content) 612px 336px;
+  grid-template-rows: 160px minmax(292px, max-content) 612px;
   grid-template-areas:
     'profile'
     'bio'
-    'experience'
-    'skills';
+    'experience';
 }
 
 .grid-container-3 {

@@ -15,7 +15,7 @@ const AccordionItem = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
     ref={ref}
-    className={cn('outline outline-1 rounded-xl', className)}
+    className={cn('shadow-section-outer rounded-xl', className)}
     {...props}
   />
 ));
@@ -29,7 +29,7 @@ const AccordionTrigger = React.forwardRef<
     <AccordionPrimitive.Trigger
       ref={ref}
       className={cn(
-        'px-5 pt-2.5 pb-1.5 min-[430px]:pt-3 min-[430px]:pb-2 flex flex-1 items-center justify-between text-start text-base font-medium [&[data-state=open]>svg]:rotate-180',
+        'px-5 pt-2.5 pb-1.5 min-[430px]:pt-3 min-[430px]:pb-2 flex flex-1 items-center justify-between text-start text-base font-normal [&[data-state=open]>svg]:rotate-180',
         className
       )}
       {...props}

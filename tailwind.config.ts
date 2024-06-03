@@ -23,8 +23,6 @@ const config = {
         page: 'linear-gradient(134deg, #EEF0F5 4.98%, #E6E9EF 94.88%, #E6E9EF 94.88%)',
         section: 'linear-gradient(90deg, #ECEEF3 0%, #F1F2F7 100%)',
         dot: 'linear-gradient(0deg, rgba(166, 180, 200, 0.20) 0%, rgba(166, 180, 200, 0.20) 100%), #E9EDF0',
-        'dot-active': 'linear-gradient(90deg, #ECEEF3 0%, #F1F2F7 100%))',
-        'avatar-inner': 'linear-gradient(90deg, #ECEEF3 0%, #F1F2F7 100%)',
         'avatar-outer':
           'linear-gradient(134deg, #E6E9EF 4.98%, #E6E9EF 4.99%, #EEF0F5 94.88%)',
       },
@@ -42,6 +40,7 @@ const config = {
           '-3px -3px 6px 0px rgba(255, 255, 255, 0.53), 2px 2px 4px 0px #A6B4C8',
         'btn-lang':
           '-3px -3px 6px 0px rgba(255, 255, 255, 0.53), 8px 9px 8px -6px rgba(166, 180, 200, 0.85)',
+        tab: '-3px -3px 12px 0px rgba(255, 255, 255, 0.53), 8px 8px 12px -6px rgba(166, 180, 200, 0.85)',
       },
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],

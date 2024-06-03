@@ -6,7 +6,7 @@ import '@/lib/env';
 import BioSection from '@/components/bio-section';
 import ContactsSection from '@/components/contacts-section';
 import CvSection from '@/components/cv-section';
-import ExperienceSection from '@/components/experience-section';
+import ExperienceSection from '@/components/experience/experience-section';
 import ProfileSection from '@/components/profile-section';
 import ProjectsSection from '@/components/projects-section';
 import ShowcasesSection from '@/components/showcases-section';
