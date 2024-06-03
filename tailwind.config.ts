@@ -22,9 +22,13 @@ const config = {
       backgroundImage: {
         page: 'linear-gradient(134deg, #EEF0F5 4.98%, #E6E9EF 94.88%, #E6E9EF 94.88%)',
         section: 'linear-gradient(90deg, #ECEEF3 0%, #F1F2F7 100%)',
-        dot: 'linear-gradient(0deg, rgba(166, 180, 200, 0.20) 0%, rgba(166, 180, 200, 0.20) 100%), #E9EDF0',
+        dot: 'linear-gradient(rgba(178, 189, 204, 0.50), rgba(178, 189, 204, 0.50));',
+        'dot-active':
+          'linear-gradient(90deg, #ECEEF3 0%, #F1F2F7 100%), linear-gradient(90deg, #ECEEF3 0%, #F1F2F7 100%)',
         'avatar-outer':
           'linear-gradient(134deg, #E6E9EF 4.98%, #E6E9EF 4.99%, #EEF0F5 94.88%)',
+        'btn-inner': 'linear-gradient(134deg, #5B656F 4.98%, #3F4852 94.88%)',
+        'btn-outer': 'linear-gradient(134deg, #80868B 4.98%, #5B6773 94.88%)',
       },
       boxShadow: {
         'section-outer':
@@ -38,6 +42,10 @@ const config = {
         dot: '-1.6px -1.6px 3px 0px rgba(255, 255, 255, 0.41) inset, 1.6px 1.3px 1.98px 0px rgba(99, 116, 139, 0.20) inset',
         'dot-active':
           '-3px -3px 6px 0px rgba(255, 255, 255, 0.53), 2px 2px 4px 0px #A6B4C8',
+        'btn-inner':
+          '-2px -2px 3px 0px rgba(88, 98, 107, 0.90), 2px 2px 6px 0px #23292E',
+        'btn-outer':
+          '-2px -2px 6px 0px rgba(255, 255, 255, 0.70), 3px 3px 6px 0px #A6B4C8',
         'btn-lang':
           '-3px -3px 6px 0px rgba(255, 255, 255, 0.53), 8px 9px 8px -6px rgba(166, 180, 200, 0.85)',
         tab: '-3px -3px 12px 0px rgba(255, 255, 255, 0.53), 8px 8px 12px -6px rgba(166, 180, 200, 0.85)',

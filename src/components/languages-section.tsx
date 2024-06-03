@@ -14,16 +14,24 @@ export default function LanguagesSection() {
       </Typography>
       <ul className='flex gap-x-3'>
         <li>
-          <Button variant='lang'>HE</Button>
+          <Button variant='lang' size='md'>
+            HE
+          </Button>
         </li>
         <li>
-          <Button variant='lang'>EN</Button>
+          <Button variant='lang' size='md'>
+            EN
+          </Button>
         </li>
         <li>
-          <Button variant='lang'>UA</Button>
+          <Button variant='lang' size='md'>
+            UA
+          </Button>
         </li>
         <li>
-          <Button variant='lang'>RU</Button>
+          <Button variant='lang' size='md'>
+            RU
+          </Button>
         </li>
       </ul>
     </Section>
