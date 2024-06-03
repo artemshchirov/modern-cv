@@ -82,7 +82,12 @@ type AccordionProps = {
 
 export const AccordionComponent: React.FC<AccordionProps> = ({ items }) => {
   return (
-    <Accordion type='single' collapsible className='flex flex-col gap-y-3'>
+    <Accordion
+      type='single'
+      defaultValue='widegamut'
+      collapsible
+      className='flex flex-col gap-y-3'
+    >
       {items.map((item) => (
         <AccordionItem key={item.id} value={item.id}>
           <AccordionTrigger>

@@ -7,6 +7,14 @@ interface Props {
   className?: string;
 }
 
-export default function Section({ children, className }: Readonly<Props>) {
-  return <section className={cn(className)}>{children}</section>;
+export default function Section({
+  children,
+  className,
+  ...props
+}: Readonly<Props>) {
+  return (
+    <section className={cn(className)} {...props}>
+      {children}
+    </section>
+  );
 }

@@ -1,22 +1,11 @@
-import { cn } from '@/lib/utils';
-
 import Typography from '@/components/typography';
 import { Button } from '@/components/ui/button';
 
 import Section from '@/layouts/section';
 
-interface Props {
-  className?: string;
-}
-
-export default function CvSection({ className }: Readonly<Props>) {
+export default function CvSection() {
   return (
-    <Section
-      className={cn(
-        'cv flex flex-col gap-y-[18px] outline outline-1 rounded-xl px-5 pt-3.5 pb-5',
-        className
-      )}
-    >
+    <Section className='cv shadow-section-inner flex flex-col gap-y-[18px] rounded-xl px-5 pt-3.5 pb-5'>
       <Typography variant='h2' size='sm'>
         CV
       </Typography>
