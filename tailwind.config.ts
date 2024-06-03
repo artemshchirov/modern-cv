@@ -24,12 +24,19 @@ const config = {
         section: 'linear-gradient(90deg, #ECEEF3 0%, #F1F2F7 100%)',
         dot: 'linear-gradient(0deg, rgba(166, 180, 200, 0.20) 0%, rgba(166, 180, 200, 0.20) 100%), #E9EDF0',
         'dot-active': 'linear-gradient(90deg, #ECEEF3 0%, #F1F2F7 100%))',
+        'avatar-inner': 'linear-gradient(90deg, #ECEEF3 0%, #F1F2F7 100%)',
+        'avatar-outer':
+          'linear-gradient(134deg, #E6E9EF 4.98%, #E6E9EF 4.99%, #EEF0F5 94.88%)',
       },
       boxShadow: {
+        'section-outer':
+          '-5px -5px 20px 0px rgba(255, 255, 255, 0.53), 13px 14px 12px -6px rgba(166, 180, 200, 0.48)',
         'section-inner':
           '-12px -12px 30px 0px rgba(255, 255, 255, 0.20) inset, 7px 7px 8px 0px rgba(166, 180, 200, 0.25) inset, 10px 11px 30px -1px rgba(166, 180, 200, 0.55) inset',
-        'swiper-card':
-          '-5px -5px 20px 0px rgba(255, 255, 255, 0.53), 13px 14px 12px -6px rgba(166, 180, 200, 0.48)',
+        'avatar-outer':
+          '19px 25px 92px -32px rgba(166, 180, 200, 0.45), -20px -20px 61px 0px rgba(255, 255, 255, 0.50), 13px 14px 12px -6px rgba(166, 180, 200, 0.57)',
+        'avatar-inner':
+          '-12px -12px 30px 0px rgba(255, 255, 255, 0.20) inset, 7px 7px 8px 0px rgba(166, 180, 200, 0.52) inset, 10px 11px 30px -1px rgba(166, 180, 200, 0.70) inset',
         dot: '-1.6px -1.6px 3px 0px rgba(255, 255, 255, 0.41) inset, 1.6px 1.3px 1.98px 0px rgba(99, 116, 139, 0.20) inset',
         'dot-active':
           '-3px -3px 6px 0px rgba(255, 255, 255, 0.53), 2px 2px 4px 0px #A6B4C8',

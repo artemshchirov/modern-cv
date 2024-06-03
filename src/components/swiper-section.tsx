@@ -52,7 +52,7 @@ export default function SwiperSection() {
                 >
                   <Card
                     className={cn(
-                      'w-[238px] h-[238px] transition-transform duration-300 shadow-swiper-card border-none  ',
+                      'w-[238px] h-[238px] transition-transform duration-300 shadow-section-outer border-none  ',
                       {
                         'scale-[.828]': current !== index + 1,
                       }
