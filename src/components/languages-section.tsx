@@ -1,8 +1,8 @@
 import Typography from '@/components/typography';
-import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 
 import Section from '@/layouts/section';
-
+// TODO: Add hover tooltip with language name and proficiency level
 export default function LanguagesSection() {
   return (
     <Section
@@ -14,24 +14,24 @@ export default function LanguagesSection() {
       </Typography>
       <ul className='flex gap-x-3'>
         <li>
-          <Button variant='lang' size='md'>
+          <Badge variant='lang' className='bg-page shadow-btn-lang rounded-xl'>
             HE
-          </Button>
+          </Badge>
         </li>
         <li>
-          <Button variant='lang' size='md'>
+          <Badge variant='lang' className='bg-page shadow-btn-lang rounded-xl'>
             EN
-          </Button>
+          </Badge>
         </li>
         <li>
-          <Button variant='lang' size='md'>
+          <Badge variant='lang' className='bg-page shadow-btn-lang rounded-xl'>
             UA
-          </Button>
+          </Badge>
         </li>
         <li>
-          <Button variant='lang' size='md'>
+          <Badge variant='lang' className='bg-page shadow-btn-lang rounded-xl'>
             RU
-          </Button>
+          </Badge>
         </li>
       </ul>
     </Section>
