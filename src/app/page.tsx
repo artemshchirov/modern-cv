@@ -1,6 +1,7 @@
 'use client';
 
 import Head from 'next/head';
+import Link from 'next/link';
 import '@/lib/env';
 
 import BioSection from '@/components/bio-section';
@@ -31,7 +32,7 @@ import Header from '@/layouts/header';
 
 export default function HomePage() {
   return (
-    <main className='py-9 px-3 flex flex-col gap-y-7 '>
+    <main className='py-9 px-3 flex flex-col gap-y-6 '>
       <Head>
         <title>Hi</title>
       </Head>
@@ -52,6 +53,14 @@ export default function HomePage() {
         <ShowcasesSection />
         <TemplateSection />
       </div>
+
+      <Link
+        href='https://github.com/artemshchirov'
+        target='_blank'
+        className='text-sm text-[#A5A9B0] hover:underline'
+      >
+        © 2024 Ɐrtem
+      </Link>
     </main>
   );
 }
