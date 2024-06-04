@@ -55,6 +55,10 @@ const config = {
           '-4.183px -4.183px 16.734px 0px rgba(255, 255, 255, 0.53), 6.693px 7.53px 6.693px -5.02px rgba(166, 180, 200, 0.85)',
         'years-outer':
           '10.877px 10.04px 8.367px -5.02px rgba(166, 180, 200, 0.57)',
+        'contact-inner':
+          '-1.706px -1.706px 2.559px 0px rgba(88, 98, 107, 0.90), 1.706px 1.706px 5.118px 0px #23292E',
+        'contact-outer':
+          '-1.706px -1.706px 5.118px 0px rgba(255, 255, 255, 0.70), 2.559px 2.559px 5.118px 0px #A6B4C8',
       },
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],
