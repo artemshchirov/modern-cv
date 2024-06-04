@@ -29,6 +29,8 @@ const config = {
           'linear-gradient(134deg, #E6E9EF 4.98%, #E6E9EF 4.99%, #EEF0F5 94.88%)',
         'btn-inner': 'linear-gradient(134deg, #5B656F 4.98%, #3F4852 94.88%)',
         'btn-outer': 'linear-gradient(134deg, #80868B 4.98%, #5B6773 94.88%)',
+        'years-text-gradient':
+          'linear-gradient(86deg, #29303E 25.21%, rgba(41, 48, 62, 0.00) 179.61%)',
       },
       boxShadow: {
         'section-outer':
@@ -49,6 +51,10 @@ const config = {
         'btn-lang':
           '-3px -3px 6px 0px rgba(255, 255, 255, 0.53), 8px 9px 8px -6px rgba(166, 180, 200, 0.85)',
         tab: '-3px -3px 12px 0px rgba(255, 255, 255, 0.53), 8px 8px 12px -6px rgba(166, 180, 200, 0.85)',
+        'years-inner':
+          '-4.183px -4.183px 16.734px 0px rgba(255, 255, 255, 0.53), 6.693px 7.53px 6.693px -5.02px rgba(166, 180, 200, 0.85)',
+        'years-outer':
+          '10.877px 10.04px 8.367px -5.02px rgba(166, 180, 200, 0.57)',
       },
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],
