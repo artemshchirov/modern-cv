@@ -11,7 +11,7 @@ import ExperienceSection from '@/components/experience/experience-section';
 import ProfileSection from '@/components/profile-section';
 import ProjectsSection from '@/components/projects-section';
 import ShowcasesSection from '@/components/showcases-section';
-import SkillsSection from '@/components/skills-section';
+import SkillsSection from '@/components/skills/skills-section';
 import SwiperSection from '@/components/swiper-section';
 import TemplateSection from '@/components/template-section';
 import YearsSection from '@/components/years-section';

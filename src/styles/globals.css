@@ -49,7 +49,7 @@
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto 160px minmax(292px, max-content) 612px 336px 160px 608px 336px 140px 380px 56px;
+  grid-template-rows: auto 160px minmax(292px, max-content) 612px 290px 160px 608px 336px 140px 380px 56px;
   grid-template-areas:
     'header header'
     'profile profile'

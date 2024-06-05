@@ -14,6 +14,7 @@ import {
 
 import Section from '@/layouts/section';
 
+// TODO : rename section because its not a one swiper section
 export default function SwiperSection() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
@@ -43,7 +44,7 @@ export default function SwiperSection() {
             loop: true,
           }}
         >
-          <CarouselContent className='-ml-0'>
+          <CarouselContent className='-ml-0 pt-4 pb-[42px]'>
             {Array.from({ length: 8 }).map((_, index) => {
               return (
                 <CarouselItem
