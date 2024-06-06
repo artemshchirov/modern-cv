@@ -48,7 +48,7 @@
 .grid-container-1 {
   display: grid;
   gap: 1rem;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto 160px minmax(292px, max-content) 612px 290px 160px 608px 336px 140px 380px 56px;
   grid-template-areas:
     'header header'
@@ -67,19 +67,19 @@
 /* TODO: Do i need only here? */
 @media only screen and (min-width: 768px) {
   .grid-container-1 {
-    grid-template-columns: 1fr 1fr 2fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto 166px 292px 166px 192px 142px 395px 56px 720px;
     gap: 20px;
     grid-template-areas:
-      'header header header'
-      'profile profile experience'
-      'bio bio experience'
-      'cv years experience'
-      'skills skills skills'
-      'contacts contacts projects'
-      'showcases showcases projects'
-      'template template projects'
-      'swiper swiper swiper';
+      'header header header header'
+      'profile profile experience experience'
+      'bio bio experience experience'
+      'cv years experience experience'
+      'skills skills skills skills'
+      'contacts contacts projects projects'
+      'showcases showcases projects projects'
+      'template template projects projects'
+      'swiper swiper swiper swiper';
   }
 }
 
