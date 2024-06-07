@@ -4,7 +4,7 @@ import Section from '@/layouts/section';
 
 import MapPinIcon from '~/svg/map-pin.svg';
 
-export default function LocationSection() {
+export default function Location() {
   return (
     <Section className='col-span-1 shadow-section-outer flex flex-col gap-y-1 rounded-xl px-[17px] pt-3.5 pb-3'>
       <Typography variant='h2' size='sm' className='ml-[3px]'>

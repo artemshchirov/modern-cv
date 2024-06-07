@@ -15,7 +15,7 @@ import {
 import Section from '@/layouts/section';
 
 // TODO : rename section because its not a one swiper section
-export default function SwiperSection() {
+export default function Portfolio() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
 

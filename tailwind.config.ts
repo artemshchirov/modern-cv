@@ -11,6 +11,14 @@ const config = {
   ],
   prefix: '',
   theme: {
+    screens: {
+      xs: '420px',
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1440px',
+    },
     container: {
       center: true,
       padding: '2rem',
@@ -31,6 +39,7 @@ const config = {
         'btn-outer': 'linear-gradient(134deg, #80868B 4.98%, #5B6773 94.88%)',
         'years-text-gradient':
           'linear-gradient(86deg, #29303E 25.21%, rgba(41, 48, 62, 0.00) 179.61%)',
+        skill: 'linear-gradient(136deg, #FFF 22.24%, #BAC3CF 85.59%)',
       },
       boxShadow: {
         'section-outer':
@@ -59,6 +68,8 @@ const config = {
           '-1.706px -1.706px 2.559px 0px rgba(88, 98, 107, 0.90), 1.706px 1.706px 5.118px 0px #23292E',
         'contact-outer':
           '-1.706px -1.706px 5.118px 0px rgba(255, 255, 255, 0.70), 2.559px 2.559px 5.118px 0px #A6B4C8',
+        skill:
+          '-3px -3px 6px 0px #FFF, 8px 9px 8px -6px rgba(166, 180, 200, 0.70)',
       },
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],

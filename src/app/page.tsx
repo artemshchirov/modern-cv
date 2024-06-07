@@ -1,22 +1,23 @@
 'use client';
 
 import Head from 'next/head';
-import Link from 'next/link';
 import '@/lib/env';
 
-import BioSection from '@/components/bio-section';
-import ContactsSection from '@/components/contacts-section';
-import CvSection from '@/components/cv-section';
-import ExperienceSection from '@/components/experience/experience-section';
-import ProfileSection from '@/components/profile-section';
-import ProjectsSection from '@/components/projects-section';
-import ShowcasesSection from '@/components/showcases-section';
-import SkillsSection from '@/components/skills/skills-section';
-import SwiperSection from '@/components/swiper-section';
-import TemplateSection from '@/components/template-section';
-import YearsSection from '@/components/years-section';
+import Copyright from '@/components/copyright';
 
+import Bio from '@/grid/bio';
+import Contacts from '@/grid/contacts';
+import Cv from '@/grid/cv';
+import Experience from '@/grid/experience/experience';
+import Portfolio from '@/grid/portfolio';
+import Profile from '@/grid/profile';
+import Projects from '@/grid/projects';
+import Showcases from '@/grid/showcases';
+import Skills from '@/grid/skills/skills';
+import Template from '@/grid/template';
+import Years from '@/grid/years';
 import Header from '@/layouts/header';
+import Section from '@/layouts/section';
 
 /**
  * SVGR Support
@@ -37,30 +38,24 @@ export default function HomePage() {
         <title>Hi</title>
       </Head>
 
-      <div className='grid-container-1 mx-auto'>
+      <Section className='grid-main mx-auto'>
         <Header />
 
-        <ProfileSection />
-        <BioSection />
-        <ExperienceSection />
+        <Profile />
+        <Bio />
+        <Experience />
 
-        <SkillsSection />
-        <CvSection />
-        <YearsSection />
-        <ProjectsSection />
-        <ContactsSection />
-        <SwiperSection />
-        <ShowcasesSection />
-        <TemplateSection />
-      </div>
+        <Skills />
+        <Cv />
+        <Years />
+        <Projects />
+        <Contacts />
+        <Portfolio />
+        <Showcases />
+        <Template />
+      </Section>
 
-      <Link
-        href='https://github.com/artemshchirov'
-        target='_blank'
-        className='text-sm text-[#A5A9B0] hover:underline'
-      >
-        © 2024 Ɐrtem
-      </Link>
+      <Copyright />
     </main>
   );
 }

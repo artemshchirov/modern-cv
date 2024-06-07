@@ -167,17 +167,22 @@ Carousel.displayName = 'Carousel';
 
 const CarouselContent = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => {
+  React.HTMLAttributes<HTMLDivElement> & { isSkillsSection?: boolean }
+>(({ className, isSkillsSection = false, ...props }, ref) => {
   const { carouselRef, orientation } = useCarousel();
 
   return (
-    <div ref={carouselRef} className='overflow-hidden '>
+    <div
+      ref={carouselRef}
+      className={cn('overflow-hidden', {
+        '-ml-4 pl-4 -mr-4 pr-4 pt-2 -mt-2': isSkillsSection,
+      })}
+    >
       <div
         ref={ref}
         className={cn(
           'flex',
-          orientation === 'horizontal' ? '-ml-4' : '-mt-4 flex-col',
+          orientation === 'horizontal' ? '-ml-6 2xl:-ml-6' : '-mt-4 flex-col',
           className
         )}
         {...props}
@@ -200,7 +205,7 @@ const CarouselItem = React.forwardRef<
       aria-roledescription='slide'
       className={cn(
         'min-w-0 shrink-0 grow-0 basis-full',
-        orientation === 'horizontal' ? 'pl-4' : 'pt-4',
+        orientation === 'horizontal' ? 'pl-6' : 'pt-4',
         className
       )}
       {...props}

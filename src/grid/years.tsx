@@ -5,7 +5,7 @@ import Section from '@/layouts/section';
 import TrackLineSVG from '~/svg/track-line.svg';
 import TrackLinesSVG from '~/svg/track-lines.svg';
 
-export default function YearsSection() {
+export default function Years() {
   return (
     <Section className='years shadow-section-inner w-full flex flex-col gap-y-2.5 rounded-xl px-[17px] pt-3.5 pb-[16.47px]'>
       <Typography variant='h2' size='sm'>

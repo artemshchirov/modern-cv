@@ -4,6 +4,7 @@ import * as React from 'react';
 import { ReactNode } from 'react';
 
 import '@/styles/globals.css';
+import '@/styles/grid.css';
 
 import { cn } from '@/lib/utils';
 

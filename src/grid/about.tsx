@@ -4,7 +4,7 @@ import Typography from '@/components/typography';
 
 import Section from '@/layouts/section';
 
-export default function AboutSection() {
+export default function About() {
   return (
     <Section aria-label='About Artem' className='flex flex-col gap-y-2.5'>
       <Typography variant='h2' size='sm'>

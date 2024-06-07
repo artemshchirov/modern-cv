@@ -2,7 +2,7 @@ import Section from '@/layouts/section';
 
 import ExternalLinkIcon from '~/svg/external-link.svg';
 
-export default function ContactsSection() {
+export default function Contacts() {
   return (
     <Section className='template shadow-section-inner flex justify-between gap-x-[22px] rounded-xl px-5 py-2.5'>
       <div className='flex items-center gap-x-2 rounded-[100px] outline outline-1 outline-[#95A3B6] pl-4 pr-3.5 py-1.5 text-[#95A3B6] whitespace-nowrap opacity-60'>

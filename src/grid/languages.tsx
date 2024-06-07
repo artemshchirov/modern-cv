@@ -3,7 +3,7 @@ import { Badge } from '@/components/ui/badge';
 
 import Section from '@/layouts/section';
 // TODO: Add hover tooltip with language name and proficiency level
-export default function LanguagesSection() {
+export default function Languages() {
   return (
     <Section
       aria-label='Language Proficiency'

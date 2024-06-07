@@ -2,7 +2,7 @@ import AvatarComponent from '@/components/avatar-component';
 
 import Section from '@/layouts/section';
 
-export default function AvatarSection() {
+export default function MyAvatar() {
   // TODO: Do the grid like other grids in grid.css
   return (
     <Section

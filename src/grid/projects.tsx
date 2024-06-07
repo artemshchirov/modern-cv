@@ -12,7 +12,7 @@ import Section from '@/layouts/section';
 
 import CheckIcon from '~/svg/check.svg';
 
-export default function ProjectsSection() {
+export default function Projects() {
   return (
     <ScrollArea className='projects shadow-section-inner rounded-xl'>
       <Section className='flex flex-col gap-y-4 px-4 pt-3.5 pb-5'>

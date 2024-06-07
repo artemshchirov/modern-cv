@@ -1,5 +1,3 @@
-import educationData from '@/components/experience/education-data';
-import experienceData from '@/components/experience/experience-data';
 import Typography from '@/components/typography';
 import {
   Accordion,
@@ -10,11 +8,13 @@ import {
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
+import educationData from '@/grid/experience/education-data';
+import experienceData from '@/grid/experience/experience-data';
 import Section from '@/layouts/section';
 
 import CheckIcon from '~/svg/check.svg';
 
-export default function ExperienceSection() {
+export default function Experience() {
   const tabsItems = [
     {
       value: 'experience',

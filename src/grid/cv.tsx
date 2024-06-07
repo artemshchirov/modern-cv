@@ -6,7 +6,7 @@ import Section from '@/layouts/section';
 import DownloadIcon from '~/svg/download.svg';
 import ExternalLinkIcon from '~/svg/external-link.svg';
 
-export default function CvSection() {
+export default function Cv() {
   return (
     <Section className='cv shadow-section-inner flex flex-col gap-y-[18px] rounded-xl px-4 pt-3.5 pb-5'>
       <Typography variant='h2' size='sm'>
