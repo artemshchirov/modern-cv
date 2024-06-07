@@ -20,6 +20,7 @@
     border: calc(var(--pixel-size) * 1) solid var(--secondary-background);
     font-size: calc(var(--pixel-size) * 2);
     line-height: calc(var(--pixel-size) * 3.5);
+    margin-left: auto;
   }
 
   .score > div {

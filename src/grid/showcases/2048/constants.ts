@@ -1,9 +1,11 @@
 /**
  * Game Layout
  */
-export const containerWidthMobile = 288; // px
+export const containerWidthMobile = 296; // px
 
-export const containerWidthDesktop = 464; // px
+export const containerWidthTablet = 319; // px
+
+export const containerWidthDesktop = 260; // px
 
 export const tileCountPerDimension = 4;
 

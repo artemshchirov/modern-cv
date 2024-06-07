@@ -9,7 +9,7 @@ import { showLogger } from '@/constant/env';
 export default function logger(object: unknown, comment?: string): void {
   if (!showLogger) return;
 
-  console.log(
+  console.info(
     '%c ============== INFO LOG \n',
     'color: #22D3EE',
     `${typeof window !== 'undefined' && window?.location.pathname}\n`,

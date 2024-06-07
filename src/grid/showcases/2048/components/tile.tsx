@@ -3,9 +3,12 @@ import { useMediaQuery } from 'react-responsive';
 
 import styles from '@/styles/2048/tile.module.css';
 
+import { cn } from '@/lib/utils';
+
 import {
   containerWidthDesktop,
   containerWidthMobile,
+  containerWidthTablet,
   mergeAnimationDuration,
   tileCountPerDimension,
 } from '@/2048/constants';
@@ -13,8 +16,11 @@ import usePreviousProps from '@/2048/hooks/use-previous-props';
 import { Tile as TileProps } from '@/2048/models/tile';
 
 export default function Tile({ position, value }: Readonly<TileProps>) {
-  const isWideScreen = useMediaQuery({ minWidth: 512 });
-  const containerWidth = isWideScreen
+  const isTabletScreen = useMediaQuery({ minWidth: 768 });
+  const isDesktopScreen = useMediaQuery({ minWidth: 1440 });
+  const containerWidth = isTabletScreen
+    ? containerWidthTablet
+    : isDesktopScreen
     ? containerWidthDesktop
     : containerWidthMobile;
 
@@ -40,7 +46,10 @@ export default function Tile({ position, value }: Readonly<TileProps>) {
   };
 
   return (
-    <div className={`${styles.tile} ${styles[`tile${value}`]}`} style={style}>
+    <div
+      className={cn('shadow-2048-cell', styles.tile, styles[`tile${value}`])}
+      style={style}
+    >
       {value}
     </div>
   );

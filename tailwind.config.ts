@@ -40,6 +40,7 @@ const config = {
         'years-text-gradient':
           'linear-gradient(86deg, #29303E 25.21%, rgba(41, 48, 62, 0.00) 179.61%)',
         skill: 'linear-gradient(136deg, #FFF 22.24%, #BAC3CF 85.59%)',
+        2048: 'linear-gradient(134deg, #EEF0F5 4.98%, #E6E9EF 94.88%, #E6E9EF 94.88%)',
       },
       boxShadow: {
         'section-outer':
@@ -70,6 +71,8 @@ const config = {
           '-1.706px -1.706px 5.118px 0px rgba(255, 255, 255, 0.70), 2.559px 2.559px 5.118px 0px #A6B4C8',
         skill:
           '-3px -3px 6px 0px #FFF, 8px 9px 8px -6px rgba(166, 180, 200, 0.70)',
+        '2048-cell':
+          '-5px -5px 20px 0px rgba(255, 255, 255, 0.53), 12px 13px 12px -6px rgba(166, 180, 200, 0.50)',
       },
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],

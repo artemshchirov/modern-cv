@@ -33,6 +33,25 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+
+    /* 2048 START */
+    --pixel-size: 8px;
+
+    /* Backgrounds */
+    --primary-background: linear-gradient(
+      134deg,
+      #eef0f5 4.98%,
+      #e6e9ef 94.88%,
+      #e6e9ef 94.88%
+    );
+    --secondary-background: #bbada0;
+    --cell-background: linear-gradient(135deg, #eef0f5, #e6e9ef);
+    --tile-background: linear-gradient(134deg, #dbeaff 4.98%, #c0d7f7 94.88%);
+
+    /* Colors */
+    --primary-text-color: #29303e;
+    --secondary-text-color: #fff;
+    /* 2048 END */
   }
 
   .dark {

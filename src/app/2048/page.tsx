@@ -1,22 +1,12 @@
-import styles from '@/styles/2048/index.module.css';
-
-import Board from '@/2048/components/board';
-import Score from '@/2048/components/score';
+import Game2048 from '@/2048/components/2048';
 
 export default function Game2048Page() {
   return (
-    <div className={styles.twenty48}>
-      <header>
-        <h1>2048</h1>
-        <Score />
-      </header>
-      <main>
-        <Board />
-      </main>
-
+    <>
+      <Game2048 />
       {/* <footer>
         <div>Made with ❤️ by Artem</div>
       </footer> */}
-    </div>
+    </>
   );
 }

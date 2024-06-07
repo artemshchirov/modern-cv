@@ -45,12 +45,10 @@ export default function Board() {
         } else {
           moveTiles('move_left');
         }
+      } else if (deltaY > 0) {
+        moveTiles('move_down');
       } else {
-        if (deltaY > 0) {
-          moveTiles('move_down');
-        } else {
-          moveTiles('move_up');
-        }
+        moveTiles('move_up');
       }
     },
     [moveTiles]
