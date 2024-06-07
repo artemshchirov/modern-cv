@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
+      "@/2048/*": ["./src/grid/showcases/2048/*"],
       "~/*": ["./public/*"]
     },
     "incremental": true,
