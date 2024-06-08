@@ -2,17 +2,17 @@ const skillsData = [
   {
     id: 'js',
     src: 'https://skillicons.dev/icons?i=js',
-    name: 'JavaScript',
+    name: 'JS',
   },
   {
     id: 'ts',
     src: 'https://skillicons.dev/icons?i=ts',
-    name: 'TypeScript',
+    name: 'TS',
   },
   {
     id: 'nextjs',
     src: 'https://skillicons.dev/icons?i=nextjs',
-    name: 'Next.js',
+    name: 'Next',
   },
   {
     id: 'react',
@@ -52,7 +52,7 @@ const skillsData = [
   {
     id: 'nodejs',
     src: 'https://skillicons.dev/icons?i=nodejs',
-    name: 'Node.js',
+    name: 'Node',
   },
   {
     id: 'express',
@@ -117,12 +117,12 @@ const skillsData = [
   {
     id: 'nuxt3',
     src: 'https://skillicons.dev/icons?i=nuxtjs',
-    name: 'Nuxt3',
+    name: 'Nuxt',
   },
   {
     id: 'vue',
     src: 'https://skillicons.dev/icons?i=vue',
-    name: 'Vue.js',
+    name: 'Vue',
   },
   {
     id: 'cdn',

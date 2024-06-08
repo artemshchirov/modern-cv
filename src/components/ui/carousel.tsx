@@ -312,7 +312,8 @@ const CarouselDots = React.forwardRef<
             key={i}
             variant='dot'
             className={cn({
-              'w-[26px] bg-dot-active shadow-dot-active': currentSlide === i,
+              'w-[26px] bg-dot-active shadow-dot-active hover:bg-transparent':
+                currentSlide === i,
             })}
             aria-label={`Go to slide ${i + 1}`}
             onClick={() => api?.scrollTo(i)}

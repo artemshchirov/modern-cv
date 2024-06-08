@@ -40,7 +40,8 @@ const config = {
         'years-text-gradient':
           'linear-gradient(86deg, #29303E 25.21%, rgba(41, 48, 62, 0.00) 179.61%)',
         skill: 'linear-gradient(136deg, #FFF 22.24%, #BAC3CF 85.59%)',
-        2048: 'linear-gradient(134deg, #EEF0F5 4.98%, #E6E9EF 94.88%, #E6E9EF 94.88%)',
+        'status-signal':
+          'linear-gradient(136deg, #09DD84 16.11%, #B9FFE2 96.51%)',
       },
       boxShadow: {
         'section-outer':
@@ -73,6 +74,15 @@ const config = {
           '-3px -3px 6px 0px #FFF, 8px 9px 8px -6px rgba(166, 180, 200, 0.70)',
         '2048-cell':
           '-5px -5px 20px 0px rgba(255, 255, 255, 0.53), 12px 13px 12px -6px rgba(166, 180, 200, 0.50)',
+        status:
+          '-12px -12px 30px 0px rgba(255, 255, 255, 0.20) inset, 7px 7px 8px 0px rgba(166, 180, 200, 0.40) inset, 10px 11px 30px -1px rgba(166, 180, 200, 0.40) inset',
+        'status-signal': '3px 3px 6px 0px #9199A5, -3px -2px 7px -2px #4BE9A7',
+        'theme-switch':
+          '-12px -12px 30px 0px rgba(255, 255, 255, 0.20) inset, 7px 7px 8px 0px rgba(166, 180, 200, 0.30) inset, 10px 11px 30px -1px rgba(166, 180, 200, 0.30) inset',
+        'theme-switch-inactive':
+          '-3.375px -3.375px 6.75px 0px rgba(255, 255, 255, 0.52), 3.375px 3.375px 6.75px 0px #9199A5',
+        'theme-switch-active':
+          '-3.187px -3.187px 6.375px 0px rgba(255, 255, 255, 0.52), 3.188px 3.188px 6.375px 0px #9199A5',
       },
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],

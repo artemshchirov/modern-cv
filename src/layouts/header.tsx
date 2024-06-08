@@ -1,5 +1,7 @@
 import Link from 'next/link';
 
+import Status from '@/components/status';
+import ThemeSwitch from '@/components/theme-switch';
 import { Button } from '@/components/ui/button';
 import {
   Sheet,
@@ -18,11 +20,9 @@ import MenuIcon from '~/svg/menu.svg';
 export default function Header() {
   return (
     <header className='header flex justify-between items-center pb-2'>
-      <div className='max-w-max flex items-center gap-x-6 rounded-[100px] outline outline-2 outline-black py-1.5 pr-[30px] pl-6'>
-        <div className='animate-pulse w-3.5 h-3.5 rounded-full bg-lime-400 outline outline-1 outline-white' />
-        <p className='text-base'>Available</p>
-      </div>
+      <Status />
       <div className='flex gap-x-4'>
+        <ThemeSwitch />
         <EditIcon className='w-[26px] h-[26px]' stroke='#29303E' />
 
         <Sheet>
@@ -41,6 +41,7 @@ export default function Header() {
                 <div className='w-[18px] h-[18px] rounded-full bg-[#4E565F] outline outline-1 outline-black' />
                 <div className='w-[18px] h-[18px] rounded-full bg-white outline outline-1 outline-gray-500' />
               </div>
+
               <SheetClose className='m-0'>
                 <CloseIcon className='w-6 h-6' stroke='#29303E' />
               </SheetClose>
