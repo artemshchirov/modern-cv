@@ -5,7 +5,7 @@ export default function Copyright() {
     <Link
       href='https://github.com/artemshchirov'
       target='_blank'
-      className='text-sm text-[#A5A9B0] hover:underline'
+      className='text-sm text-[#A5A9B0] max-w-max hover:underline'
     >
       © 2024 Ɐrtem
     </Link>

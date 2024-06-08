@@ -22,7 +22,7 @@ const buttonVariants = cva(
         dot: 'w-3 h-3 bg-dot shadow-dot rounded-full p-0  transition-all duration-300',
       },
       size: {
-        default: 'p-1',
+        default: 'p-1 ',
         sm: 'rounded-md px-3 text-xs',
         lg: 'rounded-md px-8',
         icon: 'p-3.5',

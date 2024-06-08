@@ -42,6 +42,7 @@ const config = {
         skill: 'linear-gradient(136deg, #FFF 22.24%, #BAC3CF 85.59%)',
         'status-signal':
           'linear-gradient(136deg, #09DD84 16.11%, #B9FFE2 96.51%)',
+        menu: 'linear-gradient(134deg, rgba(238, 240, 245, 0.80) 4.98%, rgba(230, 233, 239, 0.80) 94.88%, rgba(230, 233, 239, 0.80) 94.88%)',
       },
       boxShadow: {
         'section-outer':

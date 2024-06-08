@@ -37,7 +37,10 @@ const contacts = [
 
 export default function Contacts() {
   return (
-    <Section className='contacts shadow-section-inner flex flex-col gap-y-4 rounded-xl px-5 pt-3.5 pb-8'>
+    <Section
+      id='contacts'
+      className='contacts shadow-section-inner flex flex-col gap-y-4 rounded-xl px-5 pt-3.5 pb-8'
+    >
       <Typography variant='h2' size='sm'>
         Contacts
       </Typography>

@@ -30,7 +30,10 @@ export default function Experience() {
 
   return (
     <ScrollArea className='experience shadow-section-outer rounded-xl'>
-      <Section className='flex flex-col gap-y-4 px-4 pt-3.5 pb-5'>
+      <Section
+        id='experience'
+        className='flex flex-col gap-y-4 px-4 pt-3.5 pb-5'
+      >
         <Typography variant='h2' size='sm' className='ml-1'>
           Experience & Education
         </Typography>

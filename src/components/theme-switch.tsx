@@ -4,7 +4,11 @@ import { cn } from '@/lib/utils';
 
 import { Button } from '@/components/ui/button';
 
-export default function ThemeSwitch() {
+interface Props {
+  className?: string;
+}
+
+export default function ThemeSwitch({ className }: Readonly<Props>) {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleTheme = (desiredDarkMode: boolean) => {
@@ -14,7 +18,12 @@ export default function ThemeSwitch() {
   };
 
   return (
-    <div className='flex justify-center items-center gap-x-3 px-3 py-[9px] rounded-full shadow-theme-switch'>
+    <div
+      className={cn(
+        'flex justify-center items-center gap-x-3 px-3 py-[9px] rounded-full shadow-theme-switch',
+        className
+      )}
+    >
       <Button
         variant='dot'
         className={cn(
