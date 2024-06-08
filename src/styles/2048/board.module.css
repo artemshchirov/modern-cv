@@ -15,9 +15,6 @@
 }
 
 .cell {
-  /* width: 66px;
-  height: 66px; */
-  /* margin: 4px; */
   border-radius: calc(var(--pixel-size) * 2);
   background: var(--cell-background);
   box-shadow: -5px -5px 20px 0px rgba(255, 255, 255, 0.53),
@@ -28,29 +25,32 @@
   margin: 8px;
   position: absolute;
   z-index: 2;
-  /* margin: calc(var(--pixel-size) * 0.5); */
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
 }
 
-@media (min-width: 512px) {
+@media (min-width: 768px) {
   .board {
-    width: calc(var(--pixel-size) * 12.5 * 4 + var(--pixel-size) * 10);
+    width: 319px;
+    height: 319px;
   }
 
   .grid {
-    border: calc(var(--pixel-size) * 1) solid var(--secondary-background);
+    grid-template-columns: repeat(4, 70px);
+    grid-template-rows: repeat(4, 70px);
+  }
+}
+
+@media (min-width: 1440px) {
+  .board {
+    width: 260px;
+    height: 260px;
   }
 
-  .cell {
-    width: calc(var(--pixel-size) * 12.5);
-    height: calc(var(--pixel-size) * 12.5);
-    margin: calc(var(--pixel-size) * 1);
-  }
-
-  .tiles {
-    margin: calc(var(--pixel-size) * 1);
+  .grid {
+    grid-template-columns: repeat(4, 55px);
+    grid-template-rows: repeat(4, 55px);
   }
 }

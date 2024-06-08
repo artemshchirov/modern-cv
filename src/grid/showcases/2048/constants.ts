@@ -3,9 +3,9 @@
  */
 export const containerWidthMobile = 296; // px
 
-export const containerWidthTablet = 319; // px
+export const containerWidthTablet = 312; // px
 
-export const containerWidthDesktop = 260; // px
+export const containerWidthDesktop = 252; // px
 
 export const tileCountPerDimension = 4;
 
@@ -14,4 +14,4 @@ export const tileCountPerDimension = 4;
  */
 export const mergeAnimationDuration = 100; // ms
 
-export const moveAnimationDuration = 200; // ms
+export const moveAnimationDuration = 100; // ms

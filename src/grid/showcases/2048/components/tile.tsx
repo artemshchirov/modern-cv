@@ -16,7 +16,7 @@ import usePreviousProps from '@/2048/hooks/use-previous-props';
 import { Tile as TileProps } from '@/2048/models/tile';
 
 export default function Tile({ position, value }: Readonly<TileProps>) {
-  const isTabletScreen = useMediaQuery({ minWidth: 768 });
+  const isTabletScreen = useMediaQuery({ minWidth: 768, maxWidth: 1440 });
   const isDesktopScreen = useMediaQuery({ minWidth: 1440 });
   const containerWidth = isTabletScreen
     ? containerWidthTablet
