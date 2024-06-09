@@ -28,7 +28,7 @@ const config = {
     },
     extend: {
       backgroundImage: {
-        dark: 'linear-gradient(159deg, #363E46 -25.92%, #2C343C 82.89%)',
+        'page-dark': 'linear-gradient(159deg, #363E46 -25.92%, #2C343C 82.89%)',
         page: 'linear-gradient(134deg, #EEF0F5 4.98%, #E6E9EF 94.88%, #E6E9EF 94.88%)',
         section: 'linear-gradient(90deg, #ECEEF3 0%, #F1F2F7 100%)',
         dot: 'linear-gradient(rgba(178, 189, 204, 0.50), rgba(178, 189, 204, 0.50));',
@@ -48,6 +48,8 @@ const config = {
       boxShadow: {
         divider:
           '7px 4px 10px 2px rgba(0, 0, 0, 0.25), -5px -5px 20px 0px rgba(72, 83, 92, 0.35)',
+        'divider-dark':
+          '7px 4px 9px 0px rgba(0, 0, 0, 0.25), -5px -5px 20px 0px rgba(72, 83, 92, 0.35)',
         'section-outer':
           '-5px -5px 20px 0px rgba(255, 255, 255, 0.53), 13px 14px 12px -6px rgba(166, 180, 200, 0.48)',
         'section-inner':

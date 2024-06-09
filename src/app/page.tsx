@@ -37,12 +37,12 @@ import Section from '@/layouts/section';
 
 export default function HomePage() {
   return (
-    <main className='bg-pink-200 max-w-max mx-auto flex flex-col gap-y-6 px-3 py-[36px] md:px-6 2xl:p-0'>
+    <main className='max-w-max mx-auto flex flex-col gap-y-6 px-3 py-[36px] md:px-6 2xl:p-0'>
       <Section className='grid-main 2xl:px-[60px] 2xl:py-9 relative'>
         <Header />
 
-        <div className='hidden 2xl:block absolute top-0 right-[calc(100%-508px)] bottom-0 left-0 bg-emerald-300 -z-10' />
-        <div className='hidden 2xl:block divider bg-cyan-400 -z-20' />
+        <div className='hidden 2xl:block bg-page-dark dark:bg-page shadow-divider dark:shadow-divider-dark absolute top-0 right-[calc(100%-508px)] bottom-0 left-0 rounded-r-[24px] overflow-hidden -z-10' />
+        <div className='hidden 2xl:block divider -z-20' />
 
         <Profile />
         <Bio />

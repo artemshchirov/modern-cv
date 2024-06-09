@@ -1,6 +1,7 @@
 // NOTE: Guide to create a theme switcher component: https://dev.to/danhawkins/a-simple-theme-switcher-in-react-for-tailwind-css-1349
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useLocalStorage } from 'usehooks-ts';
 
 import { cn } from '@/lib/utils';
 
@@ -11,18 +12,26 @@ interface Props {
 }
 
 export default function ThemeSwitch({ className }: Readonly<Props>) {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [theme, setTheme] = useLocalStorage('theme', 'light');
+  const [isLightMode, setIsLightMode] = useState(theme == 'light');
 
-  const toggleTheme = (desiredDarkMode: boolean) => {
-    if (isDarkMode !== desiredDarkMode) {
-      setIsDarkMode(desiredDarkMode);
+  useEffect(() => {
+    const htmlSelector = document.querySelector('html');
+    if (htmlSelector) {
+      htmlSelector.classList.remove('light', 'dark');
+      htmlSelector.classList.add(theme);
     }
+  }, [theme]);
+
+  const handleThemeChange = (isLightThemeActive: boolean) => {
+    setTheme(isLightThemeActive ? 'light' : 'dark');
+    setIsLightMode(isLightThemeActive);
   };
 
   return (
     <div
       className={cn(
-        'bg-section  shadow-theme-switch flex justify-center items-center gap-x-3 px-3 py-[9px] rounded-full',
+        'bg-section shadow-theme-switch flex justify-center items-center gap-x-3 px-3 py-[9px] rounded-full',
         className
       )}
     >
@@ -31,22 +40,22 @@ export default function ThemeSwitch({ className }: Readonly<Props>) {
         className={cn(
           'w-[18px] h-[18px] bg-page shadow-theme-switch-inactive duration-150',
           {
-            'w-[32px] shadow-theme-switch-active': !isDarkMode,
+            'w-[32px] shadow-theme-switch-active': isLightMode,
           }
         )}
         aria-label='Toggle light mode'
-        onClick={() => toggleTheme(false)}
+        onClick={() => handleThemeChange(true)}
       />
       <Button
         variant='dot'
         className={cn(
           'w-[18px] h-[18px] bg-[#4e565f] shadow-theme-switch-inactive duration-150',
           {
-            'w-[32px] shadow-theme-switch-active': isDarkMode,
+            'w-[32px] shadow-theme-switch-active': !isLightMode,
           }
         )}
         aria-label='Toggle dark mode'
-        onClick={() => toggleTheme(true)}
+        onClick={() => handleThemeChange(false)}
       />
     </div>
   );
