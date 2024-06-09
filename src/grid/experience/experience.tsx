@@ -29,7 +29,7 @@ export default function Experience() {
   ];
 
   return (
-    <ScrollArea className='experience shadow-section-outer rounded-xl'>
+    <ScrollArea className='experience bg-page shadow-section-outer rounded-xl'>
       <Section
         id='experience'
         className='flex flex-col gap-y-4 px-4 pt-3.5 pb-5'

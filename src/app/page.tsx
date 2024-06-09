@@ -1,6 +1,5 @@
 'use client';
 
-import Head from 'next/head';
 import '@/lib/env';
 
 import Copyright from '@/components/copyright';
@@ -31,15 +30,19 @@ import Section from '@/layouts/section';
 // Before you begin editing, follow all comments with `STARTERCONF`,
 // to customize the default configuration.
 
+// TODO: Add a <Head> to the page
+// <Head>
+//   <title>Hi</title>
+// </Head>
+
 export default function HomePage() {
   return (
-    <main className='py-9 px-3 flex flex-col gap-y-6 '>
-      <Head>
-        <title>Hi</title>
-      </Head>
-
-      <Section className='grid-main mx-auto'>
+    <main className='bg-pink-200 max-w-max mx-auto flex flex-col gap-y-6 px-3 py-[36px] md:px-6 2xl:p-0'>
+      <Section className='grid-main 2xl:px-[60px] 2xl:py-9 relative'>
         <Header />
+
+        <div className='hidden 2xl:block absolute top-0 right-[calc(100%-508px)] bottom-0 left-0 bg-emerald-300 -z-10' />
+        <div className='hidden 2xl:block divider bg-cyan-400 -z-20' />
 
         <Profile />
         <Bio />
@@ -55,7 +58,7 @@ export default function HomePage() {
         <Template />
       </Section>
 
-      <Copyright />
+      <Copyright className='2xl:pl-[60px]' />
     </main>
   );
 }

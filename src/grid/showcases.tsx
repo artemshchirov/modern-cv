@@ -4,7 +4,7 @@ import Section from '@/layouts/section';
 
 export default function Contacts() {
   return (
-    <Section className='showcases shadow-section-inner rounded-xl px-4 pt-4 pb-[60px] '>
+    <Section className='showcases bg-section shadow-section-inner rounded-xl px-4 pt-4 pb-[60px] '>
       <div className='max-w-max mx-auto '>
         <GameProvider>
           <Game2048 />

@@ -10,7 +10,7 @@ export default function Cv() {
   return (
     <Section
       id='cv'
-      className='cv shadow-section-inner flex flex-col gap-y-[18px] rounded-xl px-4 pt-3.5 pb-5'
+      className='cv bg-section shadow-section-inner flex flex-col gap-y-[18px] rounded-xl px-4 pt-3.5 pb-5'
     >
       <Typography variant='h2' size='sm'>
         CV

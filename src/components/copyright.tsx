@@ -1,11 +1,20 @@
 import Link from 'next/link';
 
-export default function Copyright() {
+import { cn } from '@/lib/utils';
+
+interface Props {
+  className?: string;
+}
+
+export default function Copyright({ className }: Readonly<Props>) {
   return (
     <Link
       href='https://github.com/artemshchirov'
       target='_blank'
-      className='text-sm text-[#A5A9B0] max-w-max hover:underline'
+      className={cn(
+        'text-sm text-[#A5A9B0] max-w-max hover:underline',
+        className
+      )}
     >
       © 2024 Ɐrtem
     </Link>

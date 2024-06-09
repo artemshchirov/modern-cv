@@ -7,9 +7,9 @@ export default function MyAvatar() {
   return (
     <Section
       aria-label='Profile Image'
-      className='shadow-section-outer col-span-1 row-span-2 flex justify-center items-center  rounded-xl'
+      className='bg-page shadow-section-outer col-span-1 row-span-2 flex justify-center items-center rounded-xl'
     >
-      <div className='bg-avatar-outer shadow-avatar-outer w-[120px] h-[120px] flex justify-center items-center rounded-full  outline-gray-500'>
+      <div className='bg-avatar-outer shadow-avatar-outer w-[120px] h-[120px] md:w-[130px] md:h-[130px] 2xl:w-[152px] 2xl:h-[152px] flex justify-center items-center rounded-full'>
         <AvatarComponent />
       </div>
     </Section>

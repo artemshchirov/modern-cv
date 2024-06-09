@@ -15,7 +15,7 @@ const AccordionItem = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <AccordionPrimitive.Item
     ref={ref}
-    className={cn('shadow-section-outer rounded-xl', className)}
+    className={cn('bg-page shadow-section-outer rounded-xl', className)}
     {...props}
   />
 ));
