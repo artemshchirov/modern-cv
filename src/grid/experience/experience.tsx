@@ -29,12 +29,12 @@ export default function Experience() {
   ];
 
   return (
-    <ScrollArea className='experience bg-page shadow-section-outer rounded-xl'>
+    <ScrollArea className='experience bg-page dark:bg-section-dark shadow-section-outer dark:shadow-section-outer-dark 2xl:bg-section-dark 2xl:dark:bg-page 2xl:shadow-section-outer-dark 2xl:dark:shadow-section-outer rounded-xl'>
       <Section
         id='experience'
         className='flex flex-col gap-y-4 px-4 pt-3.5 pb-5'
       >
-        <Typography variant='h2' size='sm' className='ml-1'>
+        <Typography isThemeRevert variant='h2' size='sm' className='ml-1'>
           Experience & Education
         </Typography>
         <TabsComponent defaultValue='experience' items={tabsItems} />
@@ -59,7 +59,7 @@ export const TabsComponent: React.FC<TabsProps> = ({ defaultValue, items }) => {
     <Tabs defaultValue={defaultValue}>
       <TabsList>
         {items.map((item) => (
-          <TabsTrigger key={item.value} value={item.value}>
+          <TabsTrigger isThemeRevert key={item.value} value={item.value}>
             {item.label}
           </TabsTrigger>
         ))}
@@ -92,29 +92,35 @@ export const AccordionComponent: React.FC<AccordionProps> = ({ items }) => {
       className='flex flex-col gap-y-3'
     >
       {items.map((item) => (
-        <AccordionItem key={item.id} value={item.id}>
+        <AccordionItem isThemeRevert key={item.id} value={item.id}>
           <AccordionTrigger>
             <div className='flex items-center gap-x-6'>
-              <Typography className='w-min min-[430px]:w-max'>
+              <Typography isThemeRevert className='w-min min-[430px]:w-max'>
                 {item.date}
               </Typography>
               <div className='flex flex-col items-start'>
-                <Typography variant='h3'>{item.title}</Typography>
-                <Typography size='sm' color='#60656E'>
+                <Typography isThemeRevert variant='h3'>
+                  {item.title}
+                </Typography>
+                <Typography
+                  isThemeRevert
+                  size='sm'
+                  className='text-[#60656E] dark:text-[#D5D5D5] 2xl:text-[#D5D5D5] 2xl:dark:text-[#60656E]'
+                >
                   {item.subtitle}
                 </Typography>
               </div>
             </div>
           </AccordionTrigger>
           <AccordionContent>
-            <Typography variant='h4' size='sm'>
+            <Typography isThemeRevert variant='h4' size='sm'>
               Achievements/Tasks
             </Typography>
             <ul className='flex flex-col gap-y-2.5'>
               {item.achievements.map((ach, idx) => (
                 <li key={idx} className='flex gap-x-4'>
                   <CheckIcon className='w-[18px] h-[18px] shrink-0' />
-                  <Typography>{ach.text}</Typography>
+                  <Typography isThemeRevert>{ach.text}</Typography>
                 </li>
               ))}
             </ul>

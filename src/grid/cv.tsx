@@ -12,7 +12,7 @@ export default function Cv() {
       id='cv'
       className='cv bg-section shadow-section-inner flex flex-col gap-y-[18px] rounded-xl px-4 pt-3.5 pb-5'
     >
-      <Typography variant='h2' size='sm'>
+      <Typography isThemeRevert variant='h2' size='sm'>
         CV
       </Typography>
       <div className='flex flex-col gap-y-4'>

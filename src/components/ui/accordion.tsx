@@ -11,11 +11,20 @@ const Accordion = AccordionPrimitive.Root;
 
 const AccordionItem = React.forwardRef<
   React.ElementRef<typeof AccordionPrimitive.Item>,
-  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item>
->(({ className, ...props }, ref) => (
+  React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Item> & {
+    isThemeRevert?: boolean;
+  }
+>(({ className, isThemeRevert = false, ...props }, ref) => (
   <AccordionPrimitive.Item
     ref={ref}
-    className={cn('bg-page shadow-section-outer rounded-xl', className)}
+    className={cn(
+      'bg-page dark:bg-section-dark dark:shadow-section-outer-dark  shadow-section-outer rounded-xl',
+      {
+        '2xl:dark:bg-page 2xl:bg-section-dark 2xl:shadow-section-outer-dark  2xl:dark:shadow-section-outer':
+          isThemeRevert,
+      },
+      className
+    )}
     {...props}
   />
 ));

@@ -41,7 +41,7 @@ export default function Contacts() {
       id='contacts'
       className='contacts bg-section shadow-section-inner flex flex-col gap-y-4 rounded-xl px-5 pt-3.5 pb-8'
     >
-      <Typography variant='h2' size='sm'>
+      <Typography isThemeRevert variant='h2' size='sm'>
         Contacts
       </Typography>
       <ul className='mx-auto flex gap-x-5'>

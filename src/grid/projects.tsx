@@ -16,7 +16,7 @@ export default function Projects() {
   return (
     <ScrollArea className='projects bg-section shadow-section-inner rounded-xl'>
       <Section id='projects' className='flex flex-col gap-y-4 px-4 pt-3.5 pb-5'>
-        <Typography variant='h2' size='sm' className='ml-1'>
+        <Typography isThemeRevert variant='h2' size='sm' className='ml-1'>
           Projects
         </Typography>
 
@@ -40,7 +40,10 @@ export default function Projects() {
 
                     <div className='flex flex-col items-start '>
                       <Typography variant='h3'>Widegamut</Typography>
-                      <Typography size='sm' color='#60656E'>
+                      <Typography
+                        size='sm'
+                        className='text-[#60656E] dark:text-[#D5D5D5]'
+                      >
                         Full-Stack Developer
                       </Typography>
                     </div>
@@ -84,7 +87,7 @@ export default function Projects() {
 
                     <div className='flex flex-col items-start '>
                       <Typography variant='h3'>Be`eri Print</Typography>
-                      <Typography size='sm' color='#60656E'>
+                      <Typography className='text-[#60656E] dark:text-[#D5D5D5]'>
                         Frontend Developer
                       </Typography>
                     </div>

@@ -6,8 +6,8 @@ import MapPinIcon from '~/svg/map-pin.svg';
 
 export default function Location() {
   return (
-    <Section className='bg-page col-span-1 shadow-section-outer flex flex-col gap-y-1 rounded-xl px-[17px] pt-3.5 pb-[13px]'>
-      <Typography variant='h2' size='sm' className='ml-[3px]'>
+    <Section className='bg-section-dark shadow-section-outer-dark dark:bg-page dark:shadow-section-outer col-span-1 flex flex-col gap-y-1 rounded-xl px-[17px] pt-3.5 pb-[13px]'>
+      <Typography isThemeRevert variant='h2' size='sm' className='ml-[3px]'>
         Location
       </Typography>
       <div className='flex items-center gap-x-1'>

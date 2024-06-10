@@ -6,27 +6,38 @@ type TextSize = 'xs' | 'sm' | 'base' | 'lg' | 'xl';
 
 interface Props {
   children: ReactNode;
+  className?: string;
   variant?: 'h1' | 'h2' | 'h3' | 'h4' | 'p';
   size?: TextSize;
-  color?: string;
-  className?: string;
+  isThemeRevert?: boolean;
 }
 
 export default function Typography({
   children,
+  className,
   variant = 'p',
   size = 'base',
-  color,
-  className,
+  isThemeRevert = false,
 }: Readonly<Props>) {
   const baseStyle = `max-w-max ${variant !== 'p' ? 'whitespace-nowrap' : ''}`;
 
+  // TODO: Refactor
   const variantStyles = {
-    h1: 'text-[#29303E]',
-    h2: 'text-[#95A3B6]',
-    h3: 'text-[#29303E]',
-    h4: 'text-[#A5A9B0]',
-    p: 'text-[#29303E]',
+    h1: isThemeRevert
+      ? '2xl:text-[#FFF] 2xl:dark:text-[#29303E]'
+      : 'text-[#29303E] dark:text-[#FFF]',
+    h2: isThemeRevert
+      ? 'text-[#95A3B6] dark:text-[#A5A9B0] 2xl:text-[#A5A9B0] 2xl:dark:text-[#95A3B6]'
+      : 'text-[#95A3B6] dark:text-[#A5A9B0]',
+    h3: isThemeRevert
+      ? 'text-[#29303E] dark:text-[#FFF] 2xl:text-[#FFF] 2xl:dark:text-[#29303E]'
+      : 'text-[#29303E] dark:text-[#FFF]',
+    h4: isThemeRevert
+      ? '2xl:text-[#8B8F95] 2xl:dark:text-[#A5A9B0]'
+      : 'text-[#A5A9B0] dark:text-[#8B8F95]',
+    p: isThemeRevert
+      ? '2xl:text-[#FFF] 2xl:dark:text-[#29303E]'
+      : 'text-[#29303E] dark:text-[#FFF]',
   };
 
   const ComponentTag = variant as keyof JSX.IntrinsicElements;
@@ -38,11 +49,5 @@ export default function Typography({
     className
   );
 
-  const style = color ? { color } : {};
-
-  return (
-    <ComponentTag className={textStyle} style={style}>
-      {children}
-    </ComponentTag>
-  );
+  return <ComponentTag className={textStyle}>{children}</ComponentTag>;
 }
