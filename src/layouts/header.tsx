@@ -7,10 +7,12 @@ import EditIcon from '~/svg/edit.svg';
 export default function Header() {
   return (
     <header className='header flex justify-between items-center pb-2'>
-      <Status />
+      <div>
+        <Status />
+      </div>
       <div className='flex gap-x-4'>
         <ThemeSwitch className='hidden md:flex' />
-        <EditIcon className='w-[26px] h-[26px] md:hidden' stroke='#29303E' />
+        <EditIcon className='w-[26px] h-[26px] md:hidden stroke-[#29303E] dark:stroke-white' />
         <MobileMenu />
       </div>
     </header>

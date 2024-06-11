@@ -50,6 +50,10 @@ const config = {
         'status-signal':
           'linear-gradient(136deg, #09DD84 16.11%, #B9FFE2 96.51%)',
         menu: 'linear-gradient(134deg, rgba(238, 240, 245, 0.80) 4.98%, rgba(230, 233, 239, 0.80) 94.88%, rgba(230, 233, 239, 0.80) 94.88%)',
+        'menu-dark':
+          'linear-gradient(159deg, rgba(54, 62, 70, 0.80) -25.92%, rgba(44, 52, 60, 0.80) 82.89%)',
+        'menu-active-dark':
+          'linear-gradient(134deg, rgba(63, 72, 80, 0.85) 4.98%, rgba(54, 62, 70, 0.85) 94.88%)',
       },
       boxShadow: {
         divider:
