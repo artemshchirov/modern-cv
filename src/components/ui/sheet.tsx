@@ -50,24 +50,31 @@ const sheetVariants = cva(
 
 interface SheetContentProps
   extends React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content>,
-    VariantProps<typeof sheetVariants> {}
+    VariantProps<typeof sheetVariants> {
+  isShowOverlay?: boolean;
+}
 
 const SheetContent = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Content>,
   SheetContentProps
->(({ side = 'right', className, children, ...props }, ref) => (
-  <SheetPortal>
-    <SheetOverlay />
-    <SheetPrimitive.Content
-      ref={ref}
-      className={cn(sheetVariants({ side }), className)}
-      onCloseAutoFocus={(event) => event.preventDefault()}
-      {...props}
-    >
-      {children}
-    </SheetPrimitive.Content>
-  </SheetPortal>
-));
+>(
+  (
+    { isShowOverlay = true, side = 'right', className, children, ...props },
+    ref
+  ) => (
+    <SheetPortal>
+      {isShowOverlay && <SheetOverlay />}
+      <SheetPrimitive.Content
+        ref={ref}
+        className={cn(sheetVariants({ side }), className)}
+        onCloseAutoFocus={(event) => event.preventDefault()}
+        {...props}
+      >
+        {children}
+      </SheetPrimitive.Content>
+    </SheetPortal>
+  )
+);
 SheetContent.displayName = SheetPrimitive.Content.displayName;
 
 const SheetHeader = ({
