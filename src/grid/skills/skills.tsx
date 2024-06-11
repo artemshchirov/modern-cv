@@ -37,7 +37,7 @@ export default function Skills() {
   return (
     <Section
       id='skills'
-      className='skills bg-section shadow-section-inner flex flex-col gap-y-6 rounded-xl px-5 pt-3.5 pb-8'
+      className='skills bg-section shadow-section-inner dark:bg-section-inner-dark dark:shadow-section-inner-dark flex flex-col gap-y-6 rounded-xl px-5 pt-3.5 pb-8'
     >
       <Typography isThemeRevert variant='h2' size='sm'>
         Skills

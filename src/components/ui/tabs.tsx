@@ -28,9 +28,9 @@ const TabsTrigger = React.forwardRef<
   <TabsPrimitive.Trigger
     ref={ref}
     className={cn(
-      'inline-flex items-center justify-center whitespace-nowrap rounded-[24px] px-4 py-1.5 text-sm text-[#29303E] dark:text-white dark:outline-white outline-[#5D666D] font-normal ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:bg-section-dark bg-page dark:data-[state=active]:bg-tab-active-dark dark:data-[state=active]:shadow-tab-active-dark data-[state=active]:bg-section data-[state=active]:outline data-[state=active]:outline-1 dark:shadow-tab-dark shadow-tab',
+      'inline-flex items-center justify-center whitespace-nowrap rounded-[24px] px-4 py-1.5 text-sm text-[#29303E] dark:text-white dark:outline-white outline-[#5D666D] font-normal ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:bg-section-dark bg-page dark:data-[state=active]:bg-section-inner-dark dark:data-[state=active]:shadow-tab-active-dark data-[state=active]:bg-section data-[state=active]:outline data-[state=active]:outline-1 dark:shadow-tab-dark shadow-tab',
       {
-        '2xl:bg-section-dark 2xl:dark:bg-page 2xl:outline-white 2xl:dark:outline-[#5D666D] 2xl:data-[state=active]:bg-tab-active-dark 2xl:dark:data-[state=active]:bg-section 2xl:shadow-tab-dark 2xl:dark:shadow-tab 2xl:dark:data-[state=active]:shadow-tab 2xl:dark:text-[#29303E] 2xl:text-white':
+        '2xl:bg-section-dark 2xl:dark:bg-page 2xl:outline-white 2xl:dark:outline-[#5D666D] 2xl:data-[state=active]:bg-section-inner-dark 2xl:dark:data-[state=active]:bg-section 2xl:shadow-tab-dark 2xl:dark:shadow-tab 2xl:dark:data-[state=active]:shadow-tab 2xl:dark:text-[#29303E] 2xl:text-white':
           isThemeRevert,
       },
       className

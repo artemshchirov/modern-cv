@@ -39,7 +39,7 @@ export default function Contacts() {
   return (
     <Section
       id='contacts'
-      className='contacts bg-section shadow-section-inner flex flex-col gap-y-4 rounded-xl px-5 pt-3.5 pb-8'
+      className='contacts bg-section shadow-section-inner dark:bg-section-inner-dark dark:shadow-section-inner-dark flex flex-col gap-y-4 rounded-xl px-5 pt-3.5 pb-8'
     >
       <Typography isThemeRevert variant='h2' size='sm'>
         Contacts

@@ -11,7 +11,7 @@ import Experience from '@/grid/experience/experience';
 import Portfolio from '@/grid/portfolio';
 import Profile from '@/grid/profile';
 import Projects from '@/grid/projects';
-import Showcases from '@/grid/showcases';
+import Showcases from '@/grid/showcases/showcases';
 import Skills from '@/grid/skills/skills';
 import Template from '@/grid/template';
 import Years from '@/grid/years';

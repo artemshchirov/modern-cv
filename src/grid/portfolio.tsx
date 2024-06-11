@@ -35,7 +35,7 @@ export default function Portfolio() {
     <>
       <Section
         id='portfolio'
-        className='swiper min-h-full min-w-full flex flex-col outline outline-transparent rounded-xl  pt-3.5 pb-5 shadow-section-inner bg-section'
+        className='swiper bg-section shadow-section-inner dark:bg-section-inner-dark dark:shadow-section-inner-dark min-h-full min-w-full flex flex-col outline outline-transparent rounded-xl pt-3.5 pb-5'
       >
         <Typography isThemeRevert variant='h2' size='sm' className='pl-5'>
           Latest Work
