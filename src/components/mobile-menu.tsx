@@ -3,9 +3,11 @@
 import Link from 'next/link';
 import { useState } from 'react';
 
+import ContactDialog from '@/components/contact-dialog';
 import Copyright from '@/components/copyright';
 import ThemeSwitch from '@/components/theme-switch';
 import { Button } from '@/components/ui/button';
+import { DialogTrigger } from '@/components/ui/dialog';
 import {
   Sheet,
   SheetClose,
@@ -52,9 +54,13 @@ export default function MobileMenu() {
         </SheetHeader>
         <MenuLinks onClose={handleClose} />
         <SheetFooter className='mt-auto flex flex-col gap-y-6'>
-          <Button className='text-base shadow-menu-btn-outer-dark dark:shadow-btn-outer'>
-            <span className='py-1 mx-auto font-medium '>Contact me</span>
-          </Button>
+          <ContactDialog>
+            <DialogTrigger asChild>
+              <Button className='w-full text-base shadow-menu-btn-outer-dark dark:shadow-btn-outer'>
+                <span className='py-1 mx-auto font-medium '>Contact me</span>
+              </Button>
+            </DialogTrigger>
+          </ContactDialog>
           <Copyright />
         </SheetFooter>
       </SheetContent>

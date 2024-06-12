@@ -42,9 +42,11 @@ export interface ButtonProps
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  (
+    { className, variant = 'default', size, asChild = false, ...props },
+    ref
+  ) => {
     const Comp = asChild ? Slot : 'button';
-    const isDefaultVariant = !variant || variant === 'default';
 
     return (
       <Comp
@@ -52,8 +54,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         {...props}
       >
-        {isDefaultVariant ? (
-          <span className='bg-btn-inner-dark shadow-btn-inner-dark dark:bg-page dark:shadow-btn-inner  w-full h-full py-1 px-3 rounded-[100px] flex justify-between items-center'>
+        {variant === 'default' ? (
+          <span className='bg-btn-inner-dark shadow-btn-inner-dark dark:bg-page dark:shadow-btn-inner w-full h-full py-1 px-3  rounded-[100px] flex justify-between items-center'>
             {props.children}
           </span>
         ) : (
