@@ -2,7 +2,7 @@
   display: grid;
   gap: 16px;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto 160px minmax(292px, max-content) auto 290px 160px auto 336px 140px 380px 56px;
+  grid-template-rows: auto 160px max-content max-content 290px 160px max-content 336px 140px 380px 56px;
   grid-template-areas:
     'header header'
     'profile profile'
@@ -17,7 +17,6 @@
     'template template';
 }
 
-/* TODO: Do i need only here? */
 @media (min-width: 768px) {
   .grid-main {
     grid-template-columns: repeat(4, 1fr);
