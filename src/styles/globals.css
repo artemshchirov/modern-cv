@@ -46,6 +46,8 @@
     );
     --secondary-background: #bbada0;
     --cell-background: linear-gradient(135deg, #eef0f5, #e6e9ef);
+    --cell-shadow: -5px -5px 20px 0px rgba(255, 255, 255, 0.53),
+      12px 13px 12px -6px rgba(166, 180, 200, 0.5);
     --tile-background: linear-gradient(134deg, #dbeaff 4.98%, #c0d7f7 94.88%);
 
     /* Colors */
@@ -95,6 +97,17 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
+
+    --primary-background: linear-gradient(
+      134deg,
+      #3f4850 4.98%,
+      #363e46 94.88%
+    );
+    --secondary-background: #bbada0;
+    --cell-background: linear-gradient(134deg, #3f4850 4.98%, #363e46 94.88%);
+    --cell-shadow: -5px -5px 20px 0px rgba(72, 83, 92, 0.35),
+      12px 13px 12px -6px rgba(35, 40, 45, 0.5);
+    --tile-background: linear-gradient(134deg, #dbeaff 4.98%, #c0d7f7 94.88%);
 
     --track-line-start: #f1f2f5;
     --track-line-end: #e6e9ef;

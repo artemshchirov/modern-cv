@@ -47,7 +47,11 @@ export default function Tile({ position, value }: Readonly<TileProps>) {
 
   return (
     <div
-      className={cn('shadow-2048-cell', styles.tile, styles[`tile${value}`])}
+      className={cn(
+        'shadow-2048-cell dark:shadow-2048-cell-dark',
+        styles.tile,
+        styles[`tile${value}`]
+      )}
       style={style}
     >
       {value}

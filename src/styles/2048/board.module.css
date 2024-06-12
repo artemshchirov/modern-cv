@@ -17,8 +17,7 @@
 .cell {
   border-radius: calc(var(--pixel-size) * 2);
   background: var(--cell-background);
-  box-shadow: -5px -5px 20px 0px rgba(255, 255, 255, 0.53),
-    12px 13px 12px -6px rgba(166, 180, 200, 0.5);
+  box-shadow: var(--cell-shadow);
 }
 
 .tiles {

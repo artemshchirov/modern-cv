@@ -126,6 +126,8 @@ const config = {
           '-3.462px -3.462px 6.923px 0px rgba(72, 83, 92, 0.35), 9.231px 10.385px 9.231px -6.923px rgba(35, 40, 45, 0.80)',
         '2048-cell':
           '-5px -5px 20px 0px rgba(255, 255, 255, 0.53), 12px 13px 12px -6px rgba(166, 180, 200, 0.50)',
+        '2048-cell-dark':
+          '-5px -5px 20px 0px rgba(72, 83, 92, 0.35), 12px 13px 12px -6px rgba(35, 40, 45, 0.50)',
         status:
           '-12px -12px 30px 0px rgba(255, 255, 255, 0.20) inset, 7px 7px 8px 0px rgba(166, 180, 200, 0.40) inset, 10px 11px 30px -1px rgba(166, 180, 200, 0.40) inset',
         'status-dark':
