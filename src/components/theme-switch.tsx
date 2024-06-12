@@ -31,16 +31,17 @@ export default function ThemeSwitch({ className }: Readonly<Props>) {
   return (
     <div
       className={cn(
-        'bg-section shadow-theme-switch flex justify-center items-center gap-x-3 px-3 py-[9px] rounded-full',
+        'bg-section shadow-theme-switch dark:bg-theme-switch-dark dark:shadow-theme-switch-dark flex justify-center items-center gap-x-3 px-3 py-[9px] rounded-full',
         className
       )}
     >
       <Button
         variant='dot'
         className={cn(
-          'w-[18px] h-[18px] bg-page shadow-theme-switch-inactive duration-150',
+          'w-[18px] h-[18px] bg-page shadow-theme-switch-inactive dark:shadow-theme-switch-inactive-dark duration-150',
           {
-            'w-[32px] shadow-theme-switch-active': isLightMode,
+            'w-[32px] shadow-theme-switch-active dark:shadow-theme-switch-active-dark':
+              isLightMode,
           }
         )}
         aria-label='Toggle light mode'
@@ -49,9 +50,10 @@ export default function ThemeSwitch({ className }: Readonly<Props>) {
       <Button
         variant='dot'
         className={cn(
-          'w-[18px] h-[18px] bg-[#4e565f] shadow-theme-switch-inactive duration-150',
+          'w-[18px] h-[18px] bg-[#4e565f] shadow-theme-switch-inactive  dark:shadow-theme-switch-inactive-dark  duration-150',
           {
-            'w-[32px] shadow-theme-switch-active': !isLightMode,
+            'w-[32px] shadow-theme-switch-active dark:shadow-theme-switch-active-dark':
+              !isLightMode,
           }
         )}
         aria-label='Toggle dark mode'

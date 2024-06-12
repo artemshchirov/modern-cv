@@ -53,7 +53,7 @@ export default function Portfolio() {
                 <CarouselItem key={index} className={cn('pl-0 basis-auto')}>
                   <Card
                     className={cn(
-                      'w-[238px] h-[238px] md:w-[622px] md:h-[622px] 2xl:w-[306px] 2xl:h-[306px] transition-transform duration-300 shadow-section-outer border-none ',
+                      'w-[238px] h-[238px] md:w-[622px] md:h-[622px] 2xl:w-[306px] 2xl:h-[306px] transition-transform duration-300 bg-page shadow-section-outer dark:bg-section-dark dark:shadow-section-outer-dark',
                       {
                         'scale-[.828] md:scale-[.9] 2xl:scale-[.88]':
                           current !== index + 1,
@@ -61,9 +61,7 @@ export default function Portfolio() {
                     )}
                   >
                     <CardContent className='flex aspect-square items-center justify-center p-0'>
-                      <span className='text-2xl font-semibold'>
-                        {index + 1}
-                      </span>
+                      <span className='text-2xl font-medium'>{index + 1}</span>
                     </CardContent>
                   </Card>
                 </CarouselItem>

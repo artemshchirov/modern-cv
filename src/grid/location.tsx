@@ -11,7 +11,7 @@ export default function Location() {
         Location
       </Typography>
       <div className='flex items-center gap-x-1'>
-        <MapPinIcon className='w-[22px] h-[22px]' fill='#29303E' />
+        <MapPinIcon className='w-[22px] h-[22px] fill-[#29303E] dark:fill-white' />
         <Typography>Israel</Typography>
       </div>
     </Section>

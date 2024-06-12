@@ -16,11 +16,13 @@ export default function Cv() {
         CV
       </Typography>
       <div className='flex flex-col gap-y-4'>
-        <Button className='flex justify-between'>
-          View PDF <ExternalLinkIcon className='w-4 h-4' />
+        <Button className='flex justify-between dark:shadow-cv-btn-outer'>
+          View PDF{' '}
+          <ExternalLinkIcon className='w-4 h-4 fill-[#fff] dark:fill-[#29303E]' />
         </Button>
-        <Button className='flex justify-between'>
-          Download <DownloadIcon className='w-4 h-4' />
+        <Button className='flex justify-between dark:shadow-cv-btn-outer'>
+          Download{' '}
+          <DownloadIcon className='w-4 h-4 fill-[#fff] dark:fill-[#29303E]' />
         </Button>
       </div>
     </Section>

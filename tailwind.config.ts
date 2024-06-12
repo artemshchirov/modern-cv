@@ -42,11 +42,17 @@ const config = {
           'linear-gradient(134deg, #3E464F 4.99%, #424A53 94.88%)',
         'section-inner-dark':
           'linear-gradient(249deg, #363E46 -12.81%, #2C343C 305.95%)',
-        'btn-inner': 'linear-gradient(134deg, #5B656F 4.98%, #3F4852 94.88%)',
-        'btn-outer': 'linear-gradient(134deg, #80868B 4.98%, #5B6773 94.88%)',
+        'btn-outer': 'linear-gradient(138deg, #C1C4CC 21.35%, #DDDFE3 106.56%)',
+        'btn-inner-dark':
+          'linear-gradient(134deg, #5B656F 4.98%, #3F4852 94.88%)',
+        'btn-outer-dark':
+          'linear-gradient(134deg, #80868B 4.98%, #5B6773 94.88%)',
         'years-text-gradient':
           'linear-gradient(86deg, #29303E 25.21%, rgba(41, 48, 62, 0.00) 179.61%)',
+        'years-text-gradient-dark':
+          'linear-gradient(119deg, #F1F2F5 37.46%, rgba(230, 233, 239, 0.00) 103.45%)',
         skill: 'linear-gradient(136deg, #FFF 22.24%, #BAC3CF 85.59%)',
+        'skill-dark': 'linear-gradient(136deg, #5D666D 22.24%, #242B31 85.59%)',
         'status-signal':
           'linear-gradient(136deg, #09DD84 16.11%, #B9FFE2 96.51%)',
         menu: 'linear-gradient(134deg, rgba(238, 240, 245, 0.80) 4.98%, rgba(230, 233, 239, 0.80) 94.88%, rgba(230, 233, 239, 0.80) 94.88%)',
@@ -54,6 +60,8 @@ const config = {
           'linear-gradient(159deg, rgba(54, 62, 70, 0.80) -25.92%, rgba(44, 52, 60, 0.80) 82.89%)',
         'menu-active-dark':
           'linear-gradient(134deg, rgba(63, 72, 80, 0.85) 4.98%, rgba(54, 62, 70, 0.85) 94.88%)',
+        'theme-switch-dark':
+          'linear-gradient(249deg, #424950 -12.81%, #343A41 305.95%)',
       },
       boxShadow: {
         divider:
@@ -77,9 +85,15 @@ const config = {
         dot: '-1.6px -1.6px 3px 0px rgba(255, 255, 255, 0.41) inset, 1.6px 1.3px 1.98px 0px rgba(99, 116, 139, 0.20) inset',
         'dot-active':
           '-3px -3px 6px 0px rgba(255, 255, 255, 0.53), 2px 2px 4px 0px #A6B4C8',
+        'dot-active-dark':
+          '-3px -3px 6px 0px rgba(72, 83, 92, 0.35), 2px 2px 4px 0px rgba(35, 40, 45, 0.70)',
         'btn-inner':
-          '-2px -2px 3px 0px rgba(88, 98, 107, 0.90), 2px 2px 6px 0px #23292E',
+          '2px 2px 6px rgba(166, 180, 200, 0.65), -2px -2px 3px rgba(255, 255, 255, 0.90)',
         'btn-outer':
+          '-5px -5px 20px 0px rgba(72, 83, 92, 0.35), 12px 14px 12px -6px rgba(35, 40, 45, 0.70)',
+        'btn-inner-dark':
+          '-2px -2px 3px 0px rgba(88, 98, 107, 0.90), 2px 2px 6px 0px #23292E',
+        'btn-outer-dark':
           '-2px -2px 6px 0px rgba(255, 255, 255, 0.70), 3px 3px 6px 0px #A6B4C8',
         'btn-lang':
           '-3px -3px 6px 0px rgba(255, 255, 255, 0.53), 8px 9px 8px -6px rgba(166, 180, 200, 0.85)',
@@ -92,14 +106,24 @@ const config = {
           '-3px -3px 12px 0px rgba(72, 83, 92, 0.35), 8px 8px 12px -6px rgba(35, 40, 45, 0.70)',
         'years-inner':
           '-4.183px -4.183px 16.734px 0px rgba(255, 255, 255, 0.53), 6.693px 7.53px 6.693px -5.02px rgba(166, 180, 200, 0.85)',
+        'years-inner-dark':
+          '-2.51px -2.51px 5.02px 0px rgba(72, 83, 92, 0.35), 6.693px 7.53px 6.693px -5.02px rgba(35, 40, 45, 0.80)',
         'years-outer':
           '10.877px 10.04px 8.367px -5.02px rgba(166, 180, 200, 0.57)',
-        'contact-inner':
+        'years-outer-dark':
+          '9.203px 10.04px 8.367px -5.02px rgba(35, 40, 45, 0.70)',
+        'contacts-btn-inner':
           '-1.706px -1.706px 2.559px 0px rgba(88, 98, 107, 0.90), 1.706px 1.706px 5.118px 0px #23292E',
-        'contact-outer':
+        'contacts-btn-inner-dark':
+          '-3px -3px 6px 0px rgba(255, 255, 255, 0.90), 2px 2px 6px 0px rgba(166, 180, 200, 0.65)',
+        'contacts-btn-outer':
           '-1.706px -1.706px 5.118px 0px rgba(255, 255, 255, 0.70), 2.559px 2.559px 5.118px 0px #A6B4C8',
+        'contacts-btn-outer-dark':
+          '-3px -3px 20px 0px rgba(72, 83, 92, 0.35), 10px 10px 12px -6px rgba(35, 40, 45, 0.70)',
         skill:
           '-3px -3px 6px 0px #FFF, 8px 9px 8px -6px rgba(166, 180, 200, 0.70)',
+        'skill-dark':
+          '-3.462px -3.462px 6.923px 0px rgba(72, 83, 92, 0.35), 9.231px 10.385px 9.231px -6.923px rgba(35, 40, 45, 0.80)',
         '2048-cell':
           '-5px -5px 20px 0px rgba(255, 255, 255, 0.53), 12px 13px 12px -6px rgba(166, 180, 200, 0.50)',
         status:
@@ -113,6 +137,16 @@ const config = {
           '-3.375px -3.375px 6.75px 0px rgba(255, 255, 255, 0.52), 3.375px 3.375px 6.75px 0px #9199A5',
         'theme-switch-active':
           '-3.187px -3.187px 6.375px 0px rgba(255, 255, 255, 0.52), 3.188px 3.188px 6.375px 0px #9199A5',
+        'theme-switch-dark':
+          '-12px -12px 30px 0px rgba(72, 83, 92, 0.24) inset, 7px 7px 8px 0px rgba(35, 40, 45, 0.25) inset, 10px 11px 30px -1px rgba(35, 40, 45, 0.50) inset',
+        'theme-switch-inactive-dark':
+          '7px 5px 11px -2px #23282D, 5px -5px 20px 0px rgba(72, 83, 92, 0.35)',
+        'theme-switch-active-dark':
+          '7px 5px 11px -2px #23282D, -5px -5px 20px 0px rgba(72, 83, 92, 0.35)',
+        'menu-btn-outer-dark':
+          '-2px -2px 6px 0px rgba(255, 255, 255, 0.30), 3px 3px 6px -6px #A6B4C8',
+        'cv-btn-outer':
+          '-4px -4px 20px 0px rgba(72, 83, 92, 0.35), 11px 13px 12px -6px rgba(35, 40, 45, 0.70)',
       },
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],

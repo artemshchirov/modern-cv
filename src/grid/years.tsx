@@ -19,9 +19,9 @@ export default function Years() {
         <div className='relative max-w-max'>
           <TrackLinesSVG className='w-[125.48px] h-[99.9px]' />
           <TrackLineSVG className='w-[93.7px] h-[65.26px] absolute top-[15.9px] left-[15.9px]' />
-          <div className='absolute top-[28.98px] left-[29.28px] bg-page shadow-years-outer p-[3.35px] 0 rounded-full'>
-            <div className='w-[60.24px] h-[60.24px] bg-page shadow-years-inner rounded-full flex justify-center items-center'>
-              <p className='max-w-max bg-years-text-gradient text-transparent bg-clip-text text-[33.5px] leading-[36.8px]'>
+          <div className='absolute top-[28.98px] left-[29.28px] bg-page shadow-years-outer dark:bg-section-dark dark:shadow-years-outer-dark p-[3.35px] 0 rounded-full'>
+            <div className='w-[60.24px] h-[60.24px] bg-page shadow-years-inner dark:bg-section-dark dark:shadow-years-inner-dark rounded-full flex justify-center items-center'>
+              <p className='max-w-max bg-years-text-gradient dark:bg-years-text-gradient-dark text-transparent bg-clip-text text-[33.5px] leading-[36.8px]'>
                 4
               </p>
             </div>

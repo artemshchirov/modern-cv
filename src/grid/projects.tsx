@@ -55,21 +55,21 @@ export default function Projects() {
                   </Typography>
                   <ul className='flex flex-col gap-y-2.5'>
                     <li className='flex gap-x-4'>
-                      <CheckIcon className='w-[18px] h-[18px] shrink-0' />
+                      <CheckIcon className='w-[18px] h-[18px] shrink-0 fill-[#29303E] dark:fill-white' />
                       <Typography>
                         Created 4 apps with a focus on creating an exceptional
                         user experience.
                       </Typography>
                     </li>
                     <li className='flex gap-x-4'>
-                      <CheckIcon className='w-[18px] h-[18px] shrink-0' />
+                      <CheckIcon className='w-[18px] h-[18px] shrink-0 fill-[#29303E] dark:fill-white' />
                       <Typography>
                         Wrote frontend & backend code, and self-integrated 2+
                         APIs. For example, fetching data to dashboard.
                       </Typography>
                     </li>
                     <li className='flex gap-x-4'>
-                      <CheckIcon className='w-[18px] h-[18px] shrink-0' />
+                      <CheckIcon className='w-[18px] h-[18px] shrink-0 fill-[#29303E] dark:fill-white' />
                       <Typography>
                         Resolved critical bugs to resolve issues and improve
                         performance to ensure ongoing operations.
@@ -97,21 +97,21 @@ export default function Projects() {
                   <h4 className='text-sm text-[#A5A9B0]'>Achievements/Tasks</h4>
                   <ul className='flex flex-col gap-y-2.5'>
                     <li className='flex gap-x-4'>
-                      <CheckIcon className='w-[18px] h-[18px] shrink-0' />
+                      <CheckIcon className='w-[18px] h-[18px] shrink-0 fill-[#29303E] dark:fill-white' />
                       <p>
                         Created 4 apps with a focus on creating an exceptional
                         user experience.
                       </p>
                     </li>
                     <li className='flex gap-x-4'>
-                      <CheckIcon className='w-[18px] h-[18px] shrink-0' />
+                      <CheckIcon className='w-[18px] h-[18px] shrink-0 fill-[#29303E] dark:fill-white' />
                       <p>
                         Wrote frontend & backend code, and self-integrated 2+
                         APIs. For example, fetching data to dashboard.
                       </p>
                     </li>
                     <li className='flex gap-x-4'>
-                      <CheckIcon className='w-[18px] h-[18px] shrink-0' />
+                      <CheckIcon className='w-[18px] h-[18px] shrink-0 fill-[#29303E] dark:fill-white' />
                       <p>
                         Resolved critical bugs to resolve issues and improve
                         performance to ensure ongoing operations.

@@ -52,8 +52,8 @@ export default function MobileMenu() {
         </SheetHeader>
         <MenuLinks onClose={handleClose} />
         <SheetFooter className='mt-auto flex flex-col gap-y-6'>
-          <Button className='text-base'>
-            <span className='py-1 mx-auto'>Contact me</span>
+          <Button className='text-base shadow-menu-btn-outer-dark dark:shadow-btn-outer'>
+            <span className='py-1 mx-auto font-medium '>Contact me</span>
           </Button>
           <Copyright />
         </SheetFooter>

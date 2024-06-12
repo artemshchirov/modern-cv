@@ -102,7 +102,7 @@ interface SkillCardProps {
 const SkillCard: React.FC<SkillCardProps> = ({ src, name }) => (
   <div className='max-w-max flex flex-col gap-y-2.5 overflow-visible'>
     <NextImage
-      className='bg-skill rounded-full overflow-hidden shadow-skill'
+      className='bg-skill shadow-skill dark:bg-skill-dark dark:shadow-skill-dark rounded-full overflow-hidden'
       src={src}
       alt={name}
       width={57.7}

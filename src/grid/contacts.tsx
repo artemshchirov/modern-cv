@@ -71,9 +71,9 @@ function ContactLink({ url, icon, label }: ContactLinkProps) {
       href={url}
       aria-label={label}
       target='_blank'
-      className='bg-btn-outer shadow-contact-outer p-1.5 rounded-full flex'
+      className='bg-btn-outer-dark shadow-contacts-btn-outer dark:bg-btn-outer dark:shadow-contacts-btn-outer-dark p-1.5 rounded-full flex'
     >
-      <div className='w-[46px] h-[46px] bg-btn-inner shadow-contact-inner rounded-full flex justify-center items-center'>
+      <div className='w-[46px] h-[46px] bg-btn-inner-dark shadow-contacts-btn-inner dark:bg-page dark:shadow-contacts-btn-inner-dark rounded-full flex justify-center items-center'>
         {icon}
       </div>
     </Link>

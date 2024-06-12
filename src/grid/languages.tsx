@@ -27,7 +27,7 @@ const LanguageBadge = ({ language }: { language: string }) => (
   <li>
     <Badge
       variant='lang'
-      className='dark:bg-section-dark bg-page dark:shadow-btn-lang-dark  shadow-btn-lang 2xl:bg-section-dark 2xl:dark:bg-page 2xl:dark:shadow-btn-lang 2xl:shadow-btn-lang-dark rounded-xl 2xl:text-white 2xl:dark:text-[#29303E]'
+      className='dark:bg-section-dark bg-page dark:shadow-btn-lang-dark shadow-btn-lang 2xl:bg-section-dark 2xl:dark:bg-page 2xl:dark:shadow-btn-lang 2xl:shadow-btn-lang-dark rounded-xl 2xl:text-white 2xl:dark:text-[#29303E]'
     >
       {language}
     </Badge>

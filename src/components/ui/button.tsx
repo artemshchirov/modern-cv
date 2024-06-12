@@ -10,7 +10,7 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          'bg-btn-outer shadow-btn-outer text-white hover:bg-primary/90 rounded-[100px]',
+          'bg-btn-outer-dark shadow-btn-outer-dark dark:bg-btn-outer dark:shadow-btn-outer text-white dark:text-[#29303E] hover:bg-primary/90 rounded-[100px]',
         destructive:
           'bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90',
         outline:
@@ -53,7 +53,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       >
         {isDefaultVariant ? (
-          <span className='bg-btn-inner shadow-btn-inner w-full h-full py-1 px-3 rounded-[100px] flex justify-between items-center'>
+          <span className='bg-btn-inner-dark shadow-btn-inner-dark dark:bg-page dark:shadow-btn-inner  w-full h-full py-1 px-3 rounded-[100px] flex justify-between items-center'>
             {props.children}
           </span>
         ) : (

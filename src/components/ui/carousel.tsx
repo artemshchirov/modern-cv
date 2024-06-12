@@ -236,7 +236,7 @@ const CarouselPrevious = React.forwardRef<
       onClick={scrollPrev}
       {...props}
     >
-      <ChevronLeftIcon className='h-6 w-6' />
+      <ChevronLeftIcon className='h-6 w-6 fill-[#29303E] dark:fill-white' />
       <span className='sr-only'>Previous slide</span>
     </Button>
   );
@@ -265,7 +265,7 @@ const CarouselNext = React.forwardRef<
       onClick={scrollNext}
       {...props}
     >
-      <ChevronRightIcon className='h-6 w-6' />
+      <ChevronRightIcon className='h-6 w-6 fill-[#29303E] dark:fill-white' />
       <span className='sr-only'>Next slide</span>
     </Button>
   );
@@ -311,10 +311,13 @@ const CarouselDots = React.forwardRef<
           <Button
             key={i}
             variant='dot'
-            className={cn({
-              'w-[26px] bg-dot-active shadow-dot-active hover:bg-transparent':
-                currentSlide === i,
-            })}
+            className={cn(
+              'dark:bg-section-inner-dark dark:shadow-section-inner-dark',
+              {
+                'w-[26px] bg-dot-active shadow-dot-active dark:bg-section-inner-dark dark:shadow-dot-active-dark hover:bg-transparent':
+                  currentSlide === i,
+              }
+            )}
             aria-label={`Go to slide ${i + 1}`}
             onClick={() => api?.scrollTo(i)}
           />

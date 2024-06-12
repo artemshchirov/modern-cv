@@ -119,7 +119,7 @@ export const AccordionComponent: React.FC<AccordionProps> = ({ items }) => {
             <ul className='flex flex-col gap-y-2.5'>
               {item.achievements.map((ach, idx) => (
                 <li key={idx} className='flex gap-x-4'>
-                  <CheckIcon className='w-[18px] h-[18px] shrink-0' />
+                  <CheckIcon className='w-[18px] h-[18px] shrink-0 fill-[#29303E] dark:fill-white' />
                   <Typography isThemeRevert>{ach.text}</Typography>
                 </li>
               ))}

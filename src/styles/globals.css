@@ -52,6 +52,19 @@
     --primary-text-color: #29303e;
     --secondary-text-color: #fff;
     /* 2048 END */
+
+    --track-line-start: #29303e;
+    --track-line-end: #29303e;
+
+    --contacts-icon-start: #fff;
+    --contacts-icon-end: #bac3cf;
+
+    --contacts-icon-wa-1: #fff;
+    --contacts-icon-wa-2: #bac3cf;
+    --contacts-icon-wa-3: #fff;
+    --contacts-icon-wa-4: #bac3cf;
+    --contacts-icon-wa-5: #5b656f;
+    --contacts-icon-wa-6: #3f4852;
   }
 
   .dark {
@@ -82,6 +95,19 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
+
+    --track-line-start: #f1f2f5;
+    --track-line-end: #e6e9ef;
+
+    --contacts-icon-start: #363e46;
+    --contacts-icon-end: #2c343c;
+
+    --contacts-icon-wa-1: #363e46;
+    --contacts-icon-wa-2: #2c343c;
+    --contacts-icon-wa-3: #363e46;
+    --contacts-icon-wa-4: #2c343c;
+    --contacts-icon-wa-5: #fff;
+    --contacts-icon-wa-6: #bac3cf;
   }
 }
 
