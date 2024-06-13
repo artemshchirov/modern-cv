@@ -58,7 +58,7 @@ export default function HomePage() {
         <Template />
       </Section>
 
-      <Copyright className='2xl:pl-[60px]' />
+      <Copyright className='2xl:hidden' />
     </main>
   );
 }

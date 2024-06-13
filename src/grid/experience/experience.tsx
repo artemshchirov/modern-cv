@@ -93,7 +93,7 @@ export const AccordionComponent: React.FC<AccordionProps> = ({ items }) => {
     >
       {items.map((item) => (
         <AccordionItem isThemeRevert key={item.id} value={item.id}>
-          <AccordionTrigger>
+          <AccordionTrigger isThemeRevert>
             <div className='flex items-center gap-x-6'>
               <Typography isThemeRevert className='w-min min-[430px]:w-max'>
                 {item.date}
@@ -119,7 +119,7 @@ export const AccordionComponent: React.FC<AccordionProps> = ({ items }) => {
             <ul className='flex flex-col gap-y-2.5'>
               {item.achievements.map((ach, idx) => (
                 <li key={idx} className='flex gap-x-4'>
-                  <CheckIcon className='w-[18px] h-[18px] shrink-0 fill-[#29303E] dark:fill-white' />
+                  <CheckIcon className='w-[18px] h-[18px] shrink-0 fill-[#29303E] dark:fill-white 2xl:fill-white 2xl:dark:fill-[#29303E]' />
                   <Typography isThemeRevert>{ach.text}</Typography>
                 </li>
               ))}

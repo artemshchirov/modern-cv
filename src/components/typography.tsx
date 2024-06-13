@@ -24,8 +24,8 @@ export default function Typography({
   // TODO: Refactor
   const variantStyles = {
     h1: isThemeRevert
-      ? '2xl:text-[#FFF] 2xl:dark:text-[#29303E]'
-      : 'text-[#29303E] dark:text-[#FFF]',
+      ? '2xl:text-[#FFF] 2xl:dark:text-[#29303E] 2xl:text-lg 2xl:leading-[24px]'
+      : 'text-[#29303E] dark:text-[#FFF] 2xl:text-lg',
     h2: isThemeRevert
       ? 'text-[#95A3B6] dark:text-[#A5A9B0] 2xl:text-[#A5A9B0] 2xl:dark:text-[#95A3B6]'
       : 'text-[#95A3B6] dark:text-[#A5A9B0]',
