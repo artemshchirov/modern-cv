@@ -11,6 +11,8 @@ const buttonVariants = cva(
       variant: {
         default:
           'bg-btn-outer-dark shadow-btn-outer-dark dark:bg-btn-outer dark:shadow-btn-outer text-white dark:text-[#29303E] hover:bg-primary/90 rounded-[100px]',
+        revert:
+          'bg-btn-outer-dark shadow-btn-outer-dark dark:bg-btn-outer dark:shadow-btn-outer text-white dark:text-[#29303E] 2xl:dark:bg-btn-outer-dark 2xl:dark:shadow-btn-outer-dark 2xl:bg-btn-outer 2xl:shadow-btn-outer 2xl:dark:text-white 2xl:text-[#29303E] hover:bg-primary/90 rounded-[100px]',
         destructive:
           'bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90',
         outline:
@@ -55,7 +57,11 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       >
         {variant === 'default' ? (
-          <span className='bg-btn-inner-dark shadow-btn-inner-dark dark:bg-page dark:shadow-btn-inner w-full h-full py-1 px-3  rounded-[100px] flex justify-between items-center'>
+          <span className='bg-btn-inner-dark shadow-btn-inner-dark dark:bg-page dark:shadow-btn-inner w-full h-full py-1 px-3 rounded-[100px] flex justify-between items-center'>
+            {props.children}
+          </span>
+        ) : variant === 'revert' ? (
+          <span className='bg-btn-inner-dark shadow-btn-inner-dark dark:bg-page dark:shadow-btn-inner w-full h-full py-1 px-3 rounded-[100px] flex justify-between items-center 2xl:bg-page 2xl:shadow-btn-inner 2xl:dark:bg-btn-inner-dark 2xl:dark:shadow-btn-inner-dark'>
             {props.children}
           </span>
         ) : (

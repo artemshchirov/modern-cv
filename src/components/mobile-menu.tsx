@@ -56,8 +56,10 @@ export default function MobileMenu() {
         <SheetFooter className='mt-auto flex flex-col gap-y-6'>
           <ContactDialog>
             <DialogTrigger asChild>
-              <Button className='w-full text-base shadow-menu-btn-outer-dark dark:shadow-btn-outer'>
-                <span className='py-1 mx-auto font-medium '>Contact me</span>
+              <Button className='w-full shadow-menu-btn-outer-dark dark:shadow-btn-outer'>
+                <span className='py-1 mx-auto text-base font-medium'>
+                  Contact me
+                </span>
               </Button>
             </DialogTrigger>
           </ContactDialog>

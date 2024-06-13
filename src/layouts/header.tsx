@@ -14,14 +14,19 @@ export default function Header() {
         <Status />
         <ContactDialog>
           <DialogTrigger asChild>
-            <Button className='w-full dark:shadow-cv-btn-outer'>
-              Contact me
+            <Button
+              variant='revert'
+              className='hidden md:flex min-w-[160px] md:min-w-[166px] dark:shadow-cv-btn-outer  2xl:shadow-cv-btn-outer'
+            >
+              <span className='mx-auto text-base font-medium -my-0.5'>
+                Contact me
+              </span>
             </Button>
           </DialogTrigger>
         </ContactDialog>
       </div>
       <div className='flex gap-x-4'>
-        <ThemeSwitch />
+        <ThemeSwitch className='hidden md:flex' />
         <ContactDialog>
           <DialogTrigger>
             <EditIcon className='w-[26px] h-[26px] md:hidden stroke-[#29303E] dark:stroke-white' />
