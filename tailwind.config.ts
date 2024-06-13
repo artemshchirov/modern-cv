@@ -64,6 +64,10 @@ const config = {
           'linear-gradient(249deg, #424950 -12.81%, #343A41 305.95%)',
       },
       boxShadow: {
+        input:
+          '-12px -12px 30px 0px rgba(255, 255, 255, 0.20) inset, 4px 6px 25px -9px rgba(166, 180, 200, 0.71) inset',
+        textarea:
+          '-12px -12px 30px 0px rgba(255, 255, 255, 0.20) inset, 5px 7px 25px -9px rgba(166, 180, 200, 0.71) inset',
         divider:
           '7px 4px 10px 2px rgba(0, 0, 0, 0.25), -5px -5px 20px 0px rgba(72, 83, 92, 0.35)',
         'divider-dark':
@@ -99,6 +103,8 @@ const config = {
           '-3px -3px 6px 0px rgba(255, 255, 255, 0.53), 8px 9px 8px -6px rgba(166, 180, 200, 0.85)',
         'btn-lang-dark':
           '-3px -3px 6px 0px rgba(72, 83, 92, 0.35), 8px 9px 8px -6px rgba(35, 40, 45, 0.80)',
+        'btn-flat-dark':
+          '-3px -3px 6px 0px rgba(255, 255, 255, 0.70), 3px 3px 6px 0px #A6B4C8',
         tab: '-3px -3px 12px 0px rgba(255, 255, 255, 0.53), 8px 8px 12px -6px rgba(166, 180, 200, 0.85)',
         'tab-dark':
           '-3px -3px 12px 0px rgba(72, 83, 92, 0.35), 8px 8px 12px -6px rgba(35, 40, 45, 0.80)',
@@ -157,7 +163,7 @@ const config = {
       },
       colors: {
         border: 'hsl(var(--border))',
-        input: 'hsl(var(--input))',
+        'input-color': 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',

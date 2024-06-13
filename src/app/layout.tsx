@@ -8,6 +8,8 @@ import '@/styles/grid.css';
 
 import { cn } from '@/lib/utils';
 
+import { Toaster } from '@/components/ui/toaster';
+
 import { siteConfig } from '@/constant/config';
 
 // !STARTERCONF Change these default meta
@@ -71,7 +73,8 @@ export default function RootLayout({ children }: Readonly<Props>) {
           fontSans.variable
         )}
       >
-        {children}
+        <main>{children}</main>
+        <Toaster />
       </body>
     </html>
   );

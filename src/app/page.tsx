@@ -1,5 +1,3 @@
-'use client';
-
 import '@/lib/env';
 
 import Copyright from '@/components/copyright';
@@ -38,7 +36,7 @@ import Section from '@/layouts/section';
 
 export default function HomePage() {
   return (
-    <main className='max-w-max mx-auto flex flex-col gap-y-6 px-3 py-[36px] md:px-6 2xl:p-0'>
+    <div className='max-w-max mx-auto flex flex-col gap-y-6 px-3 py-[36px] md:px-6 2xl:p-0'>
       <Section className='grid-main 2xl:px-[60px] 2xl:py-9 relative'>
         <Header />
 
@@ -60,6 +58,6 @@ export default function HomePage() {
       </Section>
 
       <Copyright className='2xl:hidden' />
-    </main>
+    </div>
   );
 }

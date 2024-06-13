@@ -1,3 +1,4 @@
+'use client';
 // NOTE: Guide to create a theme switcher component: https://dev.to/danhawkins/a-simple-theme-switcher-in-react-for-tailwind-css-1349
 
 import { useEffect, useState } from 'react';

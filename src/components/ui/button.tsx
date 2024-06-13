@@ -10,13 +10,14 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          'bg-btn-outer-dark shadow-btn-outer-dark dark:bg-btn-outer dark:shadow-btn-outer text-white dark:text-[#29303E] hover:bg-primary/90 rounded-[100px]',
+          'bg-btn-outer-dark shadow-btn-outer-dark dark:bg-btn-outer dark:shadow-btn-outer text-white dark:text-[#29303E] hover:bg-primary/90 rounded-full',
         revert:
-          'bg-btn-outer-dark shadow-btn-outer-dark dark:bg-btn-outer dark:shadow-btn-outer text-white dark:text-[#29303E] 2xl:dark:bg-btn-outer-dark 2xl:dark:shadow-btn-outer-dark 2xl:bg-btn-outer 2xl:shadow-btn-outer 2xl:dark:text-white 2xl:text-[#29303E] hover:bg-primary/90 rounded-[100px]',
+          'bg-btn-outer-dark shadow-btn-outer-dark dark:bg-btn-outer dark:shadow-btn-outer text-white dark:text-[#29303E] 2xl:dark:bg-btn-outer-dark 2xl:dark:shadow-btn-outer-dark 2xl:bg-btn-outer 2xl:shadow-btn-outer 2xl:dark:text-white 2xl:text-[#29303E] hover:bg-primary/90 rounded-full',
+        flat: 'bg-btn-inner-dark shadow-btn-flat-dark text-white hover:bg-primary/90 rounded-full',
         destructive:
           'bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90',
         outline:
-          'border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground',
+          'border border-input-color bg-background shadow-sm hover:bg-accent hover:text-accent-foreground',
         secondary:
           'bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80',
         ghost: 'hover:bg-accent hover:text-accent-foreground',
@@ -28,6 +29,7 @@ const buttonVariants = cva(
         sm: 'rounded-md px-3 text-xs',
         lg: 'rounded-md px-8',
         icon: 'p-3.5',
+        flat: 'py-3',
       },
     },
     defaultVariants: {
@@ -57,11 +59,11 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {...props}
       >
         {variant === 'default' ? (
-          <span className='bg-btn-inner-dark shadow-btn-inner-dark dark:bg-page dark:shadow-btn-inner w-full h-full py-1 px-3 rounded-[100px] flex justify-between items-center'>
+          <span className='bg-btn-inner-dark shadow-btn-inner-dark dark:bg-page dark:shadow-btn-inner w-full h-full py-1 px-3 rounded-full flex justify-between items-center'>
             {props.children}
           </span>
         ) : variant === 'revert' ? (
-          <span className='bg-btn-inner-dark shadow-btn-inner-dark dark:bg-page dark:shadow-btn-inner w-full h-full py-1 px-3 rounded-[100px] flex justify-between items-center 2xl:bg-page 2xl:shadow-btn-inner 2xl:dark:bg-btn-inner-dark 2xl:dark:shadow-btn-inner-dark'>
+          <span className='bg-btn-inner-dark shadow-btn-inner-dark dark:bg-page dark:shadow-btn-inner w-full h-full py-1 px-3 rounded-full flex justify-between items-center 2xl:bg-page 2xl:shadow-btn-inner 2xl:dark:bg-btn-inner-dark 2xl:dark:shadow-btn-inner-dark'>
             {props.children}
           </span>
         ) : (
