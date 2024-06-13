@@ -10,6 +10,7 @@ import {
   Dialog,
   DialogContent,
   DialogDescription,
+  DialogFooter,
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog';
@@ -45,10 +46,9 @@ interface Props {
 export default function ContactDialog({ children }: Readonly<Props>) {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
-    mode: `onChange`,
     defaultValues: {
-      email: '',
-      message: '',
+      email: 'test',
+      message: 'test',
     },
   });
 
@@ -86,7 +86,11 @@ export default function ContactDialog({ children }: Readonly<Props>) {
                   render={({ field }) => (
                     <FormItem>
                       <FormControl>
-                        <Input placeholder='Email' {...field} />
+                        <Input
+                          placeholder='Email'
+                          autoFocus={false}
+                          {...field}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -101,6 +105,7 @@ export default function ContactDialog({ children }: Readonly<Props>) {
                         <Textarea
                           placeholder='Enter your message'
                           className='resize-none'
+                          autoFocus={false}
                           {...field}
                         />
                       </FormControl>
@@ -122,7 +127,7 @@ export default function ContactDialog({ children }: Readonly<Props>) {
           </Form>
         </div>
 
-        {/* <DialogFooter>Contacts</DialogFooter> */}
+        <DialogFooter className='shadow-dialog-footer max-w-max mx-auto p-[22px]'></DialogFooter>
       </DialogContent>
     </Dialog>
   );

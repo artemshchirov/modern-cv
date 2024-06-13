@@ -65,7 +65,7 @@ interface ContactLinkProps {
   label: string;
 }
 
-function ContactLink({ url, icon, label }: ContactLinkProps) {
+function ContactLink({ url, icon, label }: Readonly<ContactLinkProps>) {
   return (
     <Link
       href={url}

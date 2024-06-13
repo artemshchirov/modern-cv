@@ -157,6 +157,7 @@ const config = {
           '-2px -2px 6px 0px rgba(255, 255, 255, 0.30), 3px 3px 6px -6px #A6B4C8',
         'cv-btn-outer':
           '-4px -4px 20px 0px rgba(72, 83, 92, 0.35), 11px 13px 12px -6px rgba(35, 40, 45, 0.70)',
+        'dialog-footer': '0px -4px 12px -7px rgba(166, 180, 200, 0.57)',
       },
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],
