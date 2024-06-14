@@ -5,15 +5,15 @@ import styles from '@/styles/2048/tile.module.css';
 
 import { cn } from '@/lib/utils';
 
+import usePreviousProps from '@/components/grid/showcases//2048/hooks/use-previous-props';
 import {
   containerWidthDesktop,
   containerWidthMobile,
   containerWidthTablet,
   mergeAnimationDuration,
   tileCountPerDimension,
-} from '@/2048/constants';
-import usePreviousProps from '@/2048/hooks/use-previous-props';
-import { Tile as TileProps } from '@/2048/models/tile';
+} from '@/components/grid/showcases/2048/constants';
+import { Tile as TileProps } from '@/components/grid/showcases/2048/models/tile';
 
 export default function Tile({ position, value }: Readonly<TileProps>) {
   const isTabletScreen = useMediaQuery({ minWidth: 768, maxWidth: 1440 });

@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import GameProvider from '@/2048/context/game-context';
+import GameProvider from '@/components/grid/showcases/2048/context/game-context';
 
 interface Props {
   children: ReactNode;

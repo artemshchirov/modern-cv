@@ -1,20 +1,19 @@
 import '@/lib/env';
 
 import Copyright from '@/components/copyright';
+import Bio from '@/components/grid/bio/bio';
+import Contacts from '@/components/grid/contacts/contacts';
+import Cv from '@/components/grid/cv';
+import Experience from '@/components/grid/experience/experience';
+import Portfolio from '@/components/grid/portfolio';
+import Profile from '@/components/grid/profile/profile';
+import Projects from '@/components/grid/projects';
+import Showcases from '@/components/grid/showcases/showcases';
+import Skills from '@/components/grid/skills/skills';
+import Template from '@/components/grid/template';
+import Years from '@/components/grid/years';
 
-import Bio from '@/grid/bio';
-import Contacts from '@/grid/contacts';
-import Cv from '@/grid/cv';
-import Experience from '@/grid/experience/experience';
-import Portfolio from '@/grid/portfolio';
-import Profile from '@/grid/profile';
-import Projects from '@/grid/projects';
-import Showcases from '@/grid/showcases/showcases';
-import Skills from '@/grid/skills/skills';
-import Template from '@/grid/template';
-import Years from '@/grid/years';
 import Header from '@/layouts/header';
-// import Header from '@/layouts/header';
 import Section from '@/layouts/section';
 
 /**
@@ -52,8 +51,10 @@ export default function HomePage() {
         <Years />
         <Projects />
         <Contacts />
+
         <Portfolio />
         <Showcases />
+
         <Template />
       </Section>
 

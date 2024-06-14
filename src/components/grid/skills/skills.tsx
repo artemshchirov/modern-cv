@@ -1,3 +1,4 @@
+import skillsData from '@/components/grid/skills/skills-data';
 import NextImage from '@/components/next-image';
 import Typography from '@/components/typography';
 import {
@@ -8,7 +9,6 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 
-import skillsData from '@/grid/skills/skills-data';
 import Section from '@/layouts/section';
 
 const SKILLS_PER_SLIDE_MOBILE = 6;

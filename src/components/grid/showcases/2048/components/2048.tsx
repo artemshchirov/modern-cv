@@ -1,5 +1,5 @@
-import Board from '@/grid/showcases/2048/components/board';
-import Score from '@/grid/showcases/2048/components/score';
+import Board from '@/components/grid/showcases/2048/components/board';
+import Score from '@/components/grid/showcases/2048/components/score';
 
 interface Props {
   isFullscreen?: boolean;

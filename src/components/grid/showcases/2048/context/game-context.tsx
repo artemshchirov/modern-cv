@@ -12,9 +12,11 @@ import {
 import {
   mergeAnimationDuration,
   tileCountPerDimension,
-} from '@/2048/constants';
-import { Tile } from '@/2048/models/tile';
-import gameReducer, { initialState } from '@/2048/reducers/game-reducer';
+} from '@/components/grid/showcases/2048/constants';
+import { Tile } from '@/components/grid/showcases/2048/models/tile';
+import gameReducer, {
+  initialState,
+} from '@/components/grid/showcases/2048/reducers/game-reducer';
 
 type MoveDirection = 'move_up' | 'move_down' | 'move_left' | 'move_right';
 

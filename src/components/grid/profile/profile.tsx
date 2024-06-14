@@ -1,6 +1,7 @@
-import Location from '@/grid/location';
-import MyAvatar from '@/grid/my-avatar';
-import Role from '@/grid/role';
+import Location from '@/components/grid/profile/location';
+import MyAvatar from '@/components/grid/profile/my-avatar';
+import Role from '@/components/grid/profile/role';
+
 import Section from '@/layouts/section';
 
 export default function Profile() {

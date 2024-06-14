@@ -1,8 +1,8 @@
 import { flattenDeep, isEqual, isNil } from 'lodash';
 import { uid } from 'uid';
 
-import { tileCountPerDimension } from '@/2048/constants';
-import { Tile, TileMap } from '@/2048/models/tile';
+import { tileCountPerDimension } from '@/components/grid/showcases/2048/constants';
+import { Tile, TileMap } from '@/components/grid/showcases/2048/models/tile';
 
 type State = {
   board: string[][];

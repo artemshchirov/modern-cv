@@ -1,5 +1,6 @@
-import About from '@/grid/about';
-import Languages from '@/grid/languages';
+import About from '@/components/grid/bio/about';
+import Languages from '@/components/grid/bio/languages';
+
 import Section from '@/layouts/section';
 
 export default function Bio() {

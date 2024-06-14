@@ -4,8 +4,8 @@ import { useCallback, useContext, useEffect, useRef } from 'react';
 
 import styles from '@/styles/2048/board.module.css';
 
-import { GameContext } from '@/2048/context/game-context';
-import { Tile as TileModel } from '@/2048/models/tile';
+import { GameContext } from '@/components/grid/showcases/2048/context/game-context';
+import { Tile as TileModel } from '@/components/grid/showcases/2048/models/tile';
 
 import MobileSwiper, { SwipeInput } from './mobile-swiper';
 import Tile from './tile';
