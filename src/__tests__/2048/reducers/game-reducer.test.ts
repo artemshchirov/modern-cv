@@ -2,8 +2,10 @@ import { act, renderHook } from '@testing-library/react';
 import { isNil } from 'lodash';
 import { useReducer } from 'react';
 
-import { Tile } from '@/2048/models/tile';
-import gameReducer, { initialState } from '@/2048/reducers/game-reducer';
+import { Tile } from '@/components/grid/showcases/2048/models/tile';
+import gameReducer, {
+  initialState,
+} from '@/components/grid/showcases/2048/reducers/game-reducer';
 
 describe('gameReducer', () => {
   describe('clean_up', () => {
@@ -18,7 +20,7 @@ describe('gameReducer', () => {
       };
 
       const { result } = renderHook(() =>
-        useReducer(gameReducer, initialState)
+        useReducer(gameReducer, initialState),
       );
       const [, dispatch] = result.current;
 
@@ -47,7 +49,7 @@ describe('gameReducer', () => {
       };
 
       const { result } = renderHook(() =>
-        useReducer(gameReducer, initialState)
+        useReducer(gameReducer, initialState),
       );
       const [, dispatch] = result.current;
 
@@ -68,7 +70,7 @@ describe('gameReducer', () => {
       };
 
       const { result } = renderHook(() =>
-        useReducer(gameReducer, initialState)
+        useReducer(gameReducer, initialState),
       );
       const [, dispatch] = result.current;
 
@@ -93,7 +95,7 @@ describe('gameReducer', () => {
       };
 
       const { result } = renderHook(() =>
-        useReducer(gameReducer, initialState)
+        useReducer(gameReducer, initialState),
       );
       const [, dispatch] = result.current;
 
@@ -132,7 +134,7 @@ describe('gameReducer', () => {
       };
 
       const { result } = renderHook(() =>
-        useReducer(gameReducer, initialState)
+        useReducer(gameReducer, initialState),
       );
       const [, dispatch] = result.current;
 
@@ -167,7 +169,7 @@ describe('gameReducer', () => {
       };
 
       const { result } = renderHook(() =>
-        useReducer(gameReducer, initialState)
+        useReducer(gameReducer, initialState),
       );
       const [, dispatch] = result.current;
 
@@ -204,7 +206,7 @@ describe('gameReducer', () => {
       };
 
       const { result } = renderHook(() =>
-        useReducer(gameReducer, initialState)
+        useReducer(gameReducer, initialState),
       );
       const [, dispatch] = result.current;
 
@@ -231,7 +233,7 @@ describe('gameReducer', () => {
       };
 
       const { result } = renderHook(() =>
-        useReducer(gameReducer, initialState)
+        useReducer(gameReducer, initialState),
       );
       const [, dispatch] = result.current;
 
@@ -266,7 +268,7 @@ describe('gameReducer', () => {
       };
 
       const { result } = renderHook(() =>
-        useReducer(gameReducer, initialState)
+        useReducer(gameReducer, initialState),
       );
       const [, dispatch] = result.current;
 
@@ -301,7 +303,7 @@ describe('gameReducer', () => {
       };
 
       const { result } = renderHook(() =>
-        useReducer(gameReducer, initialState)
+        useReducer(gameReducer, initialState),
       );
       const [, dispatch] = result.current;
 
@@ -338,7 +340,7 @@ describe('gameReducer', () => {
       };
 
       const { result } = renderHook(() =>
-        useReducer(gameReducer, initialState)
+        useReducer(gameReducer, initialState),
       );
       const [, dispatch] = result.current;
 
@@ -362,7 +364,7 @@ describe('gameReducer', () => {
       };
 
       const { result } = renderHook(() =>
-        useReducer(gameReducer, initialState)
+        useReducer(gameReducer, initialState),
       );
       const [, dispatch] = result.current;
 
@@ -399,7 +401,7 @@ describe('gameReducer', () => {
       };
 
       const { result } = renderHook(() =>
-        useReducer(gameReducer, initialState)
+        useReducer(gameReducer, initialState),
       );
       const [, dispatch] = result.current;
 
@@ -434,7 +436,7 @@ describe('gameReducer', () => {
       };
 
       const { result } = renderHook(() =>
-        useReducer(gameReducer, initialState)
+        useReducer(gameReducer, initialState),
       );
       const [, dispatch] = result.current;
 
@@ -469,7 +471,7 @@ describe('gameReducer', () => {
       };
 
       const { result } = renderHook(() =>
-        useReducer(gameReducer, initialState)
+        useReducer(gameReducer, initialState),
       );
       const [, dispatch] = result.current;
 
@@ -507,7 +509,7 @@ describe('gameReducer', () => {
       };
 
       const { result } = renderHook(() =>
-        useReducer(gameReducer, initialState)
+        useReducer(gameReducer, initialState),
       );
       const [, dispatch] = result.current;
 
@@ -533,7 +535,7 @@ describe('gameReducer', () => {
       };
 
       const { result } = renderHook(() =>
-        useReducer(gameReducer, initialState)
+        useReducer(gameReducer, initialState),
       );
       const [, dispatch] = result.current;
 
@@ -570,7 +572,7 @@ describe('gameReducer', () => {
       };
 
       const { result } = renderHook(() =>
-        useReducer(gameReducer, initialState)
+        useReducer(gameReducer, initialState),
       );
       const [, dispatch] = result.current;
 
@@ -605,7 +607,7 @@ describe('gameReducer', () => {
       };
 
       const { result } = renderHook(() =>
-        useReducer(gameReducer, initialState)
+        useReducer(gameReducer, initialState),
       );
       const [, dispatch] = result.current;
 
@@ -642,7 +644,7 @@ describe('gameReducer', () => {
       };
 
       const { result } = renderHook(() =>
-        useReducer(gameReducer, initialState)
+        useReducer(gameReducer, initialState),
       );
       const [, dispatch] = result.current;
 
@@ -666,7 +668,7 @@ describe('gameReducer', () => {
       };
 
       const { result } = renderHook(() =>
-        useReducer(gameReducer, initialState)
+        useReducer(gameReducer, initialState),
       );
       const [, dispatch] = result.current;
 

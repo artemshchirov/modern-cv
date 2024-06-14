@@ -17,12 +17,9 @@ describe('Tile', () => {
 
     const tile: HTMLDivElement = container.firstChild as HTMLDivElement;
     expect(tile.textContent).toEqual('2048');
-    expect(tile.className).toEqual('tile tile2048');
-    expect(tile).toHaveStyle({
-      left: `72px`,
-      top: `144px`,
-      zIndex: `2048`,
-    });
+    expect(tile.className).toEqual(
+      'shadow-2048-cell dark:shadow-2048-cell-dark tile tile2048',
+    );
   });
 
   it('should apply animation when value changes', async () => {

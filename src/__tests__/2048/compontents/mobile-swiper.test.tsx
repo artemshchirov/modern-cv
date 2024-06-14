@@ -1,6 +1,6 @@
 import { fireEvent, render } from '@testing-library/react';
 
-import MobileSwiper from '@/2048/components/mobile-swiper';
+import MobileSwiper from '@/components/grid/showcases/2048/components/mobile-swiper';
 
 describe('MobileSwiper', () => {
   it('should trigger onSwipe with correct input on touch end', () => {
@@ -8,11 +8,11 @@ describe('MobileSwiper', () => {
     const { container } = render(
       <MobileSwiper onSwipe={onSwipeMock}>
         <div data-testid='swipe-target'>Swipe me!</div>
-      </MobileSwiper>
+      </MobileSwiper>,
     );
 
     const swipeTarget = container.querySelector(
-      "[data-testid='swipe-target']"
+      "[data-testid='swipe-target']",
     ) as HTMLElement;
 
     fireEvent.touchStart(swipeTarget, {
@@ -30,11 +30,11 @@ describe('MobileSwiper', () => {
     const { container } = render(
       <MobileSwiper onSwipe={onSwipeMock}>
         <div data-testid='swipe-target'>Swipe me!</div>
-      </MobileSwiper>
+      </MobileSwiper>,
     );
 
     const swipeTarget = container.querySelector(
-      "[data-testid='swipe-target']"
+      "[data-testid='swipe-target']",
     ) as HTMLElement;
 
     fireEvent.touchStart(swipeTarget, {

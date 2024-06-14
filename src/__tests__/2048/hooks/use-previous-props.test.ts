@@ -1,6 +1,5 @@
+import usePreviousProps from '@/components/grid/showcases/2048/hooks/use-previous-props';
 import { renderHook } from '@testing-library/react';
-
-import usePreviousProps from '@/2048/hooks/use-previous-props';
 
 describe('usePreviousProps', () => {
   it('should return undefined for the first render', () => {
@@ -12,7 +11,7 @@ describe('usePreviousProps', () => {
   it('should return the previous value of the prop', () => {
     const { result, rerender } = renderHook(
       ({ value }) => usePreviousProps(value),
-      { initialProps: { value: 'initial value' } }
+      { initialProps: { value: 'initial value' } },
     );
 
     rerender({ value: 'updated value' });

@@ -1,8 +1,8 @@
 import { fireEvent, render } from '@testing-library/react';
 
-import Board from '@/2048/components/board';
-import Score from '@/2048/components/score';
-import GameProvider from '@/2048/context/game-context';
+import Board from '@/components/grid/showcases/2048/components/board';
+import Score from '@/components/grid/showcases/2048/components/score';
+import GameProvider from '@/components/grid/showcases/2048/context/game-context';
 
 describe('GameProvider', () => {
   describe('startGame', () => {
@@ -10,7 +10,7 @@ describe('GameProvider', () => {
       const { container } = render(
         <GameProvider>
           <Board />
-        </GameProvider>
+        </GameProvider>,
       );
 
       expect(container.querySelectorAll('.tile')).toHaveLength(2);
@@ -22,7 +22,7 @@ describe('GameProvider', () => {
       const { container } = render(
         <GameProvider>
           <Board />
-        </GameProvider>
+        </GameProvider>,
       );
 
       expect(container.querySelectorAll('.tile')).toHaveLength(2);
@@ -34,7 +34,7 @@ describe('GameProvider', () => {
       const { container } = render(
         <GameProvider>
           <Board />
-        </GameProvider>
+        </GameProvider>,
       );
 
       expect(container.querySelectorAll('.tile4')).toHaveLength(0);
@@ -56,7 +56,7 @@ describe('GameProvider', () => {
         <GameProvider>
           <Score />
           <Board />
-        </GameProvider>
+        </GameProvider>,
       );
 
       expect(container.querySelector('.score > div')?.textContent).toEqual('0');
@@ -67,7 +67,7 @@ describe('GameProvider', () => {
         <GameProvider>
           <Score />
           <Board />
-        </GameProvider>
+        </GameProvider>,
       );
 
       expect(container.querySelector('.score > div')?.textContent).toEqual('0');
