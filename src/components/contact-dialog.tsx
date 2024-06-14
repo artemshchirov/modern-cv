@@ -47,8 +47,8 @@ export default function ContactDialog({ children }: Readonly<Props>) {
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
-      email: 'test',
-      message: 'test',
+      email: '',
+      message: '',
     },
   });
 
@@ -66,8 +66,8 @@ export default function ContactDialog({ children }: Readonly<Props>) {
   return (
     <Dialog>
       {children}
-      <DialogContent className='p-0'>
-        <div className='pt-[60px] pb-10 px-2.5'>
+      <DialogContent className='p-0 flex flex-col md:flex-row md:max-w-[668px] lg:translate-x-[calc(-50%+66px)] overflow-hidden'>
+        <div className='flex flex-col gap-y-8 pt-[60px] pb-10 px-2.5 md:pt-10 md:px-14'>
           <DialogHeader>
             <DialogTitle>Contact me</DialogTitle>
             <DialogDescription>
@@ -77,7 +77,7 @@ export default function ContactDialog({ children }: Readonly<Props>) {
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit(onSubmit)}
-              className='mt-8 flex flex-col gap-y-8'
+              className='flex flex-col gap-y-8 w-full max-w-[424px] mx-auto md:min-w-[424px]'
             >
               <div className='flex flex-col gap-y-6'>
                 <FormField
@@ -86,11 +86,7 @@ export default function ContactDialog({ children }: Readonly<Props>) {
                   render={({ field }) => (
                     <FormItem>
                       <FormControl>
-                        <Input
-                          placeholder='Email'
-                          autoFocus={false}
-                          {...field}
-                        />
+                        <Input placeholder='Email' {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -105,7 +101,6 @@ export default function ContactDialog({ children }: Readonly<Props>) {
                         <Textarea
                           placeholder='Enter your message'
                           className='resize-none'
-                          autoFocus={false}
                           {...field}
                         />
                       </FormControl>
@@ -115,19 +110,14 @@ export default function ContactDialog({ children }: Readonly<Props>) {
                   )}
                 />
               </div>
-              <Button
-                variant='flat'
-                size='flat'
-                className='w-full'
-                type='submit'
-              >
+              <Button variant='flat' size='flat' className='' type='submit'>
                 Send message
               </Button>
             </form>
           </Form>
         </div>
 
-        <DialogFooter className='shadow-dialog-footer max-w-max mx-auto p-[22px]'></DialogFooter>
+        <DialogFooter className='bg-emerald-100 bg-dialog-footer w-full shadow-dialog-footer-bottom md:shadow-dialog-footer-left p-[22px] md:px-[37px] md:shrink'></DialogFooter>
       </DialogContent>
     </Dialog>
   );

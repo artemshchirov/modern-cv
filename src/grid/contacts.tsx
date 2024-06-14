@@ -46,7 +46,7 @@ export default function Contacts() {
       </Typography>
       <ul className='mx-auto flex gap-x-5'>
         {contacts.map((contact, index) => (
-          <li key={index} className=''>
+          <li key={index}>
             <ContactLink
               url={contact.url}
               icon={contact.icon}
@@ -71,9 +71,9 @@ function ContactLink({ url, icon, label }: Readonly<ContactLinkProps>) {
       href={url}
       aria-label={label}
       target='_blank'
-      className='bg-btn-outer-dark shadow-contacts-btn-outer dark:bg-btn-outer dark:shadow-contacts-btn-outer-dark p-1.5 rounded-full flex'
+      className='bg-btn-outer-dark shadow-contacts-btn-outer-dark dark:bg-btn-outer dark:shadow-contacts-btn-outer p-1.5 rounded-full flex'
     >
-      <div className='w-[46px] h-[46px] bg-btn-inner-dark shadow-contacts-btn-inner dark:bg-page dark:shadow-contacts-btn-inner-dark rounded-full flex justify-center items-center'>
+      <div className='w-[46px] h-[46px] bg-btn-inner-dark shadow-contacts-btn-inner-dark dark:bg-page dark:shadow-contacts-btn-inner rounded-full flex justify-center items-center'>
         {icon}
       </div>
     </Link>

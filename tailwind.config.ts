@@ -62,6 +62,8 @@ const config = {
           'linear-gradient(134deg, rgba(63, 72, 80, 0.85) 4.98%, rgba(54, 62, 70, 0.85) 94.88%)',
         'theme-switch-dark':
           'linear-gradient(249deg, #424950 -12.81%, #343A41 305.95%)',
+        'dialog-footer':
+          'linear-gradient(300deg, #EEF0F5 -5.03%, #E6E9EF 82.3%, #E6E9EF 82.3%)',
       },
       boxShadow: {
         input:
@@ -118,13 +120,13 @@ const config = {
           '10.877px 10.04px 8.367px -5.02px rgba(166, 180, 200, 0.57)',
         'years-outer-dark':
           '9.203px 10.04px 8.367px -5.02px rgba(35, 40, 45, 0.70)',
-        'contacts-btn-inner':
-          '-1.706px -1.706px 2.559px 0px rgba(88, 98, 107, 0.90), 1.706px 1.706px 5.118px 0px #23292E',
         'contacts-btn-inner-dark':
+          '-1.706px -1.706px 2.559px 0px rgba(88, 98, 107, 0.90), 1.706px 1.706px 5.118px 0px #23292E',
+        'contacts-btn-inner':
           '-3px -3px 6px 0px rgba(255, 255, 255, 0.90), 2px 2px 6px 0px rgba(166, 180, 200, 0.65)',
-        'contacts-btn-outer':
-          '-1.706px -1.706px 5.118px 0px rgba(255, 255, 255, 0.70), 2.559px 2.559px 5.118px 0px #A6B4C8',
         'contacts-btn-outer-dark':
+          '-1.706px -1.706px 5.118px 0px rgba(255, 255, 255, 0.70), 2.559px 2.559px 5.118px 0px #A6B4C8',
+        'contacts-btn-outer':
           '-3px -3px 20px 0px rgba(72, 83, 92, 0.35), 10px 10px 12px -6px rgba(35, 40, 45, 0.70)',
         skill:
           '-3px -3px 6px 0px #FFF, 8px 9px 8px -6px rgba(166, 180, 200, 0.70)',
@@ -157,7 +159,8 @@ const config = {
           '-2px -2px 6px 0px rgba(255, 255, 255, 0.30), 3px 3px 6px -6px #A6B4C8',
         'cv-btn-outer':
           '-4px -4px 20px 0px rgba(72, 83, 92, 0.35), 11px 13px 12px -6px rgba(35, 40, 45, 0.70)',
-        'dialog-footer': '0px -4px 12px -7px rgba(166, 180, 200, 0.57)',
+        'dialog-footer-bottom': '0px -4px 12px -7px rgba(166, 180, 200, 0.57)',
+        'dialog-footer-left': '-8px 0px 12px -11px rgba(166, 180, 200, 0.57)',
       },
       fontFamily: {
         sans: ['var(--font-sans)', ...fontFamily.sans],
