@@ -16,6 +16,12 @@ export default function Board() {
 
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
+      const isContactDialogOpen = document.getElementById('contact-dialog');
+
+      if (isContactDialogOpen) {
+        return;
+      }
+
       // NOTE: disables page scrolling with keyboard arrows
       e.preventDefault();
 
@@ -34,7 +40,7 @@ export default function Board() {
           break;
       }
     },
-    [moveTiles]
+    [moveTiles],
   );
 
   const handleSwipe = useCallback(
@@ -51,7 +57,7 @@ export default function Board() {
         moveTiles('move_up');
       }
     },
-    [moveTiles]
+    [moveTiles],
   );
 
   const renderGrid = () => {

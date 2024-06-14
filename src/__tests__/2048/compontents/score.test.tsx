@@ -1,8 +1,8 @@
 import { render } from '@testing-library/react';
 
-import Board from '@/2048/components/board';
-import Score from '@/2048/components/score';
-import GameProvider from '@/2048/context/game-context';
+import Board from '@/components/grid/showcases/2048/components/board';
+import Score from '@/components/grid/showcases/2048/components/score';
+import GameProvider from '@/components/grid/showcases/2048/context/game-context';
 
 describe('Score', () => {
   it('should display score', () => {
@@ -10,7 +10,7 @@ describe('Score', () => {
       <GameProvider>
         <Score />
         <Board />
-      </GameProvider>
+      </GameProvider>,
     );
 
     expect(container.querySelector('.score > div')?.textContent).toEqual('0');

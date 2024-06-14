@@ -66,7 +66,10 @@ export default function ContactDialog({ children }: Readonly<Props>) {
   return (
     <Dialog>
       {children}
-      <DialogContent className='p-0 flex flex-col max-w-[464px] md:flex-row md:max-w-[668px] lg:translate-x-[calc(-50%+66px)] overflow-hidden'>
+      <DialogContent
+        id='contact-dialog'
+        className='p-0 flex flex-col max-w-[464px] md:flex-row md:max-w-[668px] overflow-hidden'
+      >
         <div className='flex flex-col gap-y-8 pt-[60px] pb-10 px-2.5 md:pt-10 md:px-14'>
           <DialogHeader>
             <DialogTitle>Contact me</DialogTitle>

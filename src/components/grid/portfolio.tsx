@@ -58,7 +58,7 @@ export default function Portfolio() {
                       {
                         'scale-[.828] md:scale-[.9] 2xl:scale-[.88]':
                           current !== index + 1,
-                      }
+                      },
                     )}
                   >
                     <CardContent className='flex aspect-square items-center justify-center p-0'>

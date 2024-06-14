@@ -70,7 +70,7 @@ export default function RootLayout({ children }: Readonly<Props>) {
         suppressHydrationWarning
         className={cn(
           'min-h-screen bg-page dark:bg-page-dark font-sans antialiased',
-          fontSans.variable
+          fontSans.variable,
         )}
       >
         <main>{children}</main>

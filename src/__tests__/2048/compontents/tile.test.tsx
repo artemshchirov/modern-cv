@@ -1,6 +1,6 @@
 import { render, waitFor } from '@testing-library/react';
 
-import Tile from '@/2048/components/tile';
+import Tile from '@/components/grid/showcases/2048/components/tile';
 
 describe('Tile', () => {
   beforeEach(() => {
@@ -33,7 +33,7 @@ describe('Tile', () => {
 
     // Act
     const { getByText, rerender } = render(
-      <Tile position={position} value={initialValue} />
+      <Tile position={position} value={initialValue} />,
     );
 
     // Assert initial state

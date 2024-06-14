@@ -1,14 +1,14 @@
 import { render } from '@testing-library/react';
 
-import Board from '@/2048/components/board';
-import GameProvider from '@/2048/context/game-context';
+import Board from '@/components/grid/showcases/2048/components/board';
+import GameProvider from '@/components/grid/showcases/2048/context/game-context';
 
 describe('Board', () => {
   it('should render board with 16 cells', () => {
     const { container } = render(
       <GameProvider>
         <Board />
-      </GameProvider>
+      </GameProvider>,
     );
     const cellElements = container.querySelectorAll('.cell');
 
@@ -19,7 +19,7 @@ describe('Board', () => {
     const { container } = render(
       <GameProvider>
         <Board />
-      </GameProvider>
+      </GameProvider>,
     );
     const tiles = container.querySelectorAll('.tile');
 

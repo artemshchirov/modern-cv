@@ -16,23 +16,6 @@ import Years from '@/components/grid/years';
 import Header from '@/layouts/header';
 import Section from '@/layouts/section';
 
-/**
- * SVGR Support
- * Caveat: No React Props Type.
- *
- * You can override the next-env if the type is important to you
- * @see https://stackoverflow.com/questions/68103844/how-to-override-next-js-svg-module-declaration
- */
-
-// !STARTERCONF -> Select !STARTERCONF and CMD + SHIFT + F
-// Before you begin editing, follow all comments with `STARTERCONF`,
-// to customize the default configuration.
-
-// TODO: Add a <Head> to the page
-// <Head>
-//   <title>Hi</title>
-// </Head>
-
 export default function HomePage() {
   return (
     <div className='max-w-max mx-auto flex flex-col gap-y-6 px-3 py-[36px] md:px-6 2xl:p-0'>
@@ -62,3 +45,8 @@ export default function HomePage() {
     </div>
   );
 }
+
+// TODO: Add a <Head> to the page
+// <Head>
+//   <title>Hi</title>
+// </Head>
