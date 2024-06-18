@@ -91,7 +91,11 @@ export default function ContactDialog({ children }: Readonly<Props>) {
                   render={({ field }) => (
                     <FormItem>
                       <FormControl>
-                        <Input placeholder='Email' {...field} />
+                        <Input
+                          placeholder='Email'
+                          autoComplete='off'
+                          {...field}
+                        />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -115,15 +119,15 @@ export default function ContactDialog({ children }: Readonly<Props>) {
                   )}
                 />
               </div>
-              <Button variant='flat' size='flat' className='' type='submit'>
+              <Button variant='flat' size='flat' type='submit'>
                 Send message
               </Button>
             </form>
           </Form>
         </div>
 
-        <DialogFooter className='bg-emerald-100 bg-dialog-footer w-full shadow-dialog-footer-bottom md:shadow-dialog-footer-left p-[22px] md:px-[37px] md:shrink'>
-          <ContactLinks contacts={contactsData} isDialog />
+        <DialogFooter className='bg-dialog-footer w-full shadow-dialog-footer-bottom md:shadow-dialog-footer-left p-[22px] md:px-[37px] md:shrink'>
+          <ContactLinks contacts={contactsData} />
         </DialogFooter>
       </DialogContent>
     </Dialog>

@@ -2,16 +2,23 @@ import Link from 'next/link';
 import { ReactNode } from 'react';
 
 import { Contact } from '@/components/grid/contacts/contacts-data';
+import { cn } from '@/lib/utils';
 
 interface ContactLinksProps {
   contacts: Contact[];
+  isDialog?: boolean;
 }
 
 export default function ContactLinks({
   contacts,
+  isDialog = false,
 }: Readonly<ContactLinksProps>) {
   return (
-    <ul className='mx-auto flex gap-x-5'>
+    <ul
+      className={cn('mx-auto flex gap-x-5', {
+        'my-auto flex-col gap-y-5': isDialog,
+      })}
+    >
       {contacts.map((contact, index) => (
         <li key={index}>
           <ContactLink
