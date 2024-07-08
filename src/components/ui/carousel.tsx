@@ -59,14 +59,14 @@ const Carousel = React.forwardRef<
       children,
       ...props
     },
-    ref
+    ref,
   ) => {
     const [carouselRef, api] = useEmblaCarousel(
       {
         ...opts,
         axis: orientation === 'horizontal' ? 'x' : 'y',
       },
-      plugins
+      plugins,
     );
     const [canScrollPrev, setCanScrollPrev] = React.useState(false);
     const [canScrollNext, setCanScrollNext] = React.useState(false);
@@ -98,7 +98,7 @@ const Carousel = React.forwardRef<
           scrollNext();
         }
       },
-      [scrollPrev, scrollNext]
+      [scrollPrev, scrollNext],
     );
 
     React.useEffect(() => {
@@ -144,7 +144,7 @@ const Carousel = React.forwardRef<
         scrollNext,
         canScrollPrev,
         canScrollNext,
-      ]
+      ],
     );
 
     return (
@@ -161,35 +161,49 @@ const Carousel = React.forwardRef<
         </div>
       </CarouselContext.Provider>
     );
-  }
+  },
 );
 Carousel.displayName = 'Carousel';
 
 const CarouselContent = React.forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement> & { isSkillsSection?: boolean }
->(({ className, isSkillsSection = false, ...props }, ref) => {
-  const { carouselRef, orientation } = useCarousel();
+  React.HTMLAttributes<HTMLDivElement> & {
+    isSkillsSection?: boolean;
+    isShowcasesSection?: boolean;
+  }
+>(
+  (
+    {
+      className,
+      isSkillsSection = false,
+      isShowcasesSection = false,
+      ...props
+    },
+    ref,
+  ) => {
+    const { carouselRef, orientation } = useCarousel();
 
-  return (
-    <div
-      ref={carouselRef}
-      className={cn('overflow-hidden', {
-        '-ml-4 pl-4 -mr-4 pr-4 pt-2 -mt-2': isSkillsSection,
-      })}
-    >
+    return (
       <div
-        ref={ref}
-        className={cn(
-          'flex',
-          orientation === 'horizontal' ? '-ml-6' : '-mt-4 flex-col',
-          className
-        )}
-        {...props}
-      />
-    </div>
-  );
-});
+        ref={carouselRef}
+        className={cn('overflow-hidden', {
+          '-ml-4 pl-4 -mr-4 pr-4 pt-2 -mt-2': isSkillsSection,
+          'px-4 pt-4 pb-[60px] 2xl:pb-4': isShowcasesSection,
+        })}
+      >
+        <div
+          ref={ref}
+          className={cn(
+            'flex',
+            orientation === 'horizontal' ? '-ml-6' : '-mt-4 flex-col',
+            className,
+          )}
+          {...props}
+        />
+      </div>
+    );
+  },
+);
 CarouselContent.displayName = 'CarouselContent';
 
 const CarouselItem = React.forwardRef<
@@ -206,7 +220,7 @@ const CarouselItem = React.forwardRef<
       className={cn(
         'min-w-0 shrink-0 grow-0 basis-full',
         orientation === 'horizontal' ? 'pl-6' : 'pt-4',
-        className
+        className,
       )}
       {...props}
     />
@@ -230,7 +244,7 @@ const CarouselPrevious = React.forwardRef<
         orientation === 'horizontal'
           ? '-left-12 top-1/2 -translate-y-1/2'
           : '-top-12 left-1/2 -translate-x-1/2 rotate-90',
-        className
+        className,
       )}
       disabled={!canScrollPrev}
       onClick={scrollPrev}
@@ -259,7 +273,7 @@ const CarouselNext = React.forwardRef<
         orientation === 'horizontal'
           ? '-right-12 top-1/2 -translate-y-1/2'
           : '-bottom-12 left-1/2 -translate-x-1/2 rotate-90',
-        className
+        className,
       )}
       disabled={!canScrollNext}
       onClick={scrollNext}
@@ -280,7 +294,7 @@ const CarouselDots = React.forwardRef<
   const [_, setUpdateState] = React.useState(false);
   const toggleUpdateState = React.useCallback(
     () => setUpdateState((prevState) => !prevState),
-    []
+    [],
   );
 
   React.useEffect(() => {
@@ -304,7 +318,7 @@ const CarouselDots = React.forwardRef<
         ref={ref}
         className={cn(
           'max-w-max mx-auto flex justify-center gap-x-2',
-          props.className
+          props.className,
         )}
       >
         {Array.from({ length: numberOfSlides }, (_, i) => (
@@ -316,7 +330,7 @@ const CarouselDots = React.forwardRef<
               {
                 'w-[26px] bg-dot-active shadow-dot-active dark:bg-section-inner-dark dark:shadow-dot-active-dark hover:bg-transparent':
                   currentSlide === i,
-              }
+              },
             )}
             aria-label={`Go to slide ${i + 1}`}
             onClick={() => api?.scrollTo(i)}

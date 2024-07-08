@@ -16,6 +16,7 @@ export default function MobileSwiper({ children, onSwipe }: MobileSwiperProps) {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const [startX, setStartX] = useState(0);
   const [startY, setStartY] = useState(0);
+  const [activated, setActivated] = useState(false);
 
   const handleTouchStart = useCallback((e: TouchEvent) => {
     if (!wrapperRef.current?.contains(e.target as Node)) {
@@ -46,7 +47,7 @@ export default function MobileSwiper({ children, onSwipe }: MobileSwiperProps) {
       setStartX(0);
       setStartY(0);
     },
-    [startX, startY, onSwipe]
+    [startX, startY, onSwipe],
   );
 
   useEffect(() => {
@@ -58,6 +59,58 @@ export default function MobileSwiper({ children, onSwipe }: MobileSwiperProps) {
       window.removeEventListener('touchend', handleTouchEnd);
     };
   }, [handleTouchStart, handleTouchEnd]);
+  const handleMouseDown = useCallback((e: MouseEvent) => {
+    if (!wrapperRef.current?.contains(e.target as Node)) {
+      return;
+    }
+    e.preventDefault();
+    setStartX(e.clientX);
+    setStartY(e.clientY);
+    setActivated(false);
+  }, []);
+
+  const handleMouseMove = useCallback(
+    (e: MouseEvent) => {
+      if (!activated && startX !== 0) {
+        e.preventDefault();
+        const endX = e.clientX;
+        const endY = e.clientY;
+        const deltaX = endX - startX;
+        const deltaY = endY - startY;
+
+        const SWIPE_THRESHOLD = 25;
+        if (
+          Math.abs(deltaX) > SWIPE_THRESHOLD ||
+          Math.abs(deltaY) > SWIPE_THRESHOLD
+        ) {
+          onSwipe({ deltaX, deltaY });
+          setActivated(true); // Prevent further swipes until mouse up
+        }
+      }
+    },
+    [startX, startY, activated, onSwipe],
+  );
+
+  const handleMouseUp = useCallback(() => {
+    setStartX(0);
+    setStartY(0);
+    setActivated(false);
+  }, []);
+
+  useEffect(() => {
+    const element = wrapperRef.current;
+    if (element) {
+      element.addEventListener('mousedown', handleMouseDown);
+      document.addEventListener('mousemove', handleMouseMove);
+      document.addEventListener('mouseup', handleMouseUp);
+
+      return () => {
+        element.removeEventListener('mousedown', handleMouseDown);
+        document.removeEventListener('mousemove', handleMouseMove);
+        document.removeEventListener('mouseup', handleMouseUp);
+      };
+    }
+  }, [handleMouseDown, handleMouseMove, handleMouseUp]);
 
   return <div ref={wrapperRef}>{children}</div>;
 }
