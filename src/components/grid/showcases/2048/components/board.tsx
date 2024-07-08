@@ -17,25 +17,23 @@ export default function Board() {
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
       const isContactDialogOpen = document.getElementById('contact-dialog');
-
-      if (isContactDialogOpen) {
-        return;
-      }
-
-      // NOTE: disables page scrolling with keyboard arrows
-      e.preventDefault();
+      if (isContactDialogOpen) return;
 
       switch (e.code) {
         case 'ArrowUp':
+          e.preventDefault();
           moveTiles('move_up');
           break;
         case 'ArrowDown':
+          e.preventDefault();
           moveTiles('move_down');
           break;
         case 'ArrowLeft':
+          e.preventDefault();
           moveTiles('move_left');
           break;
         case 'ArrowRight':
+          e.preventDefault();
           moveTiles('move_right');
           break;
       }
